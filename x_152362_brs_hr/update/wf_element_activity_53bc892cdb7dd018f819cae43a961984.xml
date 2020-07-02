@@ -4,7 +4,7 @@
         <attributes/>
         <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
         <category/>
-        <checked_out_by/>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
         <default_height/>
         <default_width/>
         <description/>
@@ -26,7 +26,7 @@
         <sys_created_on>2020-07-01 01:52:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>53bc892cdb7dd018f819cae43a961984</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>BRSUpdateUsers</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
@@ -34,21 +34,21 @@
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_53bc892cdb7dd018f819cae43a961984</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 01:16:18</sys_updated_on>
+        <sys_updated_on>2020-07-01 01:56:19</sys_updated_on>
         <version_container_id>6cdc0d2cdb7dd018f819cae43a96191a</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=53bc892cdb7dd018f819cae43a961984"/>
     <wf_versionable action="INSERT_OR_UPDATE">
-        <checked_out/>
-        <checked_out_by/>
+        <checked_out>2020-07-01 01:52:05</checked_out>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-07-01 01:52:05</sys_created_on>
         <sys_id>a4dccd2cdb7dd018f819cae43a9619d9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 01:16:18</sys_updated_on>
-        <valid_from>2020-07-01 01:56:29</valid_from>
+        <sys_updated_on>2020-07-01 01:52:05</sys_updated_on>
+        <valid_from/>
         <valid_to/>
         <version>1</version>
         <version_container_id>6cdc0d2cdb7dd018f819cae43a96191a</version_container_id>

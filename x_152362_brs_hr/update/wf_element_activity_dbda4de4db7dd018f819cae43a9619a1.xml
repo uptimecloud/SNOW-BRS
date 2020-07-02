@@ -4,7 +4,7 @@
         <attributes/>
         <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
         <category/>
-        <checked_out_by/>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
         <default_height/>
         <default_width/>
         <description/>
@@ -14,7 +14,7 @@
         <input_transform/>
         <local_variables/>
         <name>(TCC) Current Employees for BRS</name>
-        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"JSONArrayOutput","type":"STRING"},{"name":"HasError","type":"STRING"}]}</output_meta>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"JSONArrayOutput","type":"STRING"}]}</output_meta>
         <output_process_script/>
         <output_transform/>
         <processing_script><![CDATA[try{
@@ -90,7 +90,7 @@ catch(error){
         <sys_created_on>2020-07-01 01:43:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dbda4de4db7dd018f819cae43a9619a1</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>(TCC) Current Employees for BRS</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
@@ -98,21 +98,21 @@ catch(error){
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_dbda4de4db7dd018f819cae43a9619a1</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 00:35:36</sys_updated_on>
+        <sys_updated_on>2020-07-01 01:43:53</sys_updated_on>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=dbda4de4db7dd018f819cae43a9619a1"/>
     <wf_versionable action="INSERT_OR_UPDATE">
-        <checked_out/>
-        <checked_out_by/>
+        <checked_out>2020-07-01 01:43:32</checked_out>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-07-01 01:43:32</sys_created_on>
         <sys_id>9bda4de4db7dd018f819cae43a9619a2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 00:35:36</sys_updated_on>
-        <valid_from>2020-07-01 02:04:04</valid_from>
+        <sys_updated_on>2020-07-01 01:43:32</sys_updated_on>
+        <valid_from/>
         <valid_to/>
         <version>17</version>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>

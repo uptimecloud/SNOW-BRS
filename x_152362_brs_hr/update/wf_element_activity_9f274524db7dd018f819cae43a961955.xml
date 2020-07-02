@@ -26,7 +26,7 @@
         <sys_created_on>2020-07-01 01:27:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9f274524db7dd018f819cae43a961955</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>BRSDeactivateUsers</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
@@ -34,20 +34,20 @@
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_9f274524db7dd018f819cae43a961955</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 01:07:44</sys_updated_on>
+        <sys_updated_on>2020-07-01 01:27:42</sys_updated_on>
         <version_container_id>9c5dac9cdb7d5018f819cae43a9619e3</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=9f274524db7dd018f819cae43a961955"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
-        <published>false</published>
+        <published>true</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-07-01 01:27:25</sys_created_on>
         <sys_id>5b274524db7dd018f819cae43a961956</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-02 01:07:44</sys_updated_on>
+        <sys_updated_on>2020-07-01 01:27:42</sys_updated_on>
         <valid_from>2020-07-01 01:27:42</valid_from>
         <valid_to/>
         <version>4</version>
