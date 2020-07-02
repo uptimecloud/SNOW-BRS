@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"BRSUsersJSON","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]},{"name":"SNEmpsJSON","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>BRS_CompareUsers</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"HasNewUsers","type":"STRING"},{"name":"UpdateCurrentUsers","type":"STRING"},{"name":"HasDeactiveUsers","type":"STRING"},{"name":"UpdateCurrentUsersCount","type":"STRING"},{"name":"HasNewUsersCount","type":"STRING"},{"name":"HasDeactiveUsersCount","type":"STRING"}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[//var isTCC="axf";
+//var isTCC=
+var parser = new global.JSON();
+//var str = parser.encode(usersArray[record]);
+var snowemp =parser.decode(activityInput.SNEmpsJSON);
+ //  gs.info('JSONBRSUsers '  + parser.decode("["+activityInput.BRSUsersJSON+"]"));
+//  gs.info('JSONSNUsers '  + parser.decode(activityInput.SNEmpsJSON));
+//activityOutput.BRSNewUserCount = 1;
+var brsemp =parser.decode("["+activityInput.BRSUsersJSON+"]");
+
+var arrayUtil = new global.ArrayUtil();
+//var matchusers=[];
+var snowid=[];
+var brsid=[];
+
+
+for(var record1=0; record1 < snowemp.length; record1++)
+{
+
+var isUser=snowemp[record1].username.toLowerCase();
+snowid.push(isUser);
+
+}
+//gs.info("SNOWID "+snowid);
+for(var record=0; record < brsemp.length; record++)
+{
+brsid.push(brsemp[record].username.toLowerCase());
+
+
+}
+
+//gs.info("BRSID "+brsid);
+
+var intersectid=arrayUtil.intersect(snowid,brsid);
+var diffidNew=arrayUtil.diff(snowid,brsid);
+var diffidOld=arrayUtil.diff(brsid,snowid);
+
+var newusers=[];
+for(var record2=0; record2 < diffidNew.length; record2++)
+{
+
+var insert=newusers.push(snowemp[arrayUtil.indexOf(snowid,diffidNew[record2])]);
+//gs.log("indexOf b: " + arrayUtil.indexOf(snowid, intersectid));
+}
+
+//gs.info("NEW USERLIST= "+global.JSON.stringify(newusers));
+
+var delusers=[];
+for(var record3=0; record3 < diffidOld.length; record3++)
+{
+
+
+delusers.push(brsemp[arrayUtil.indexOf(brsid,diffidOld[record3])]);
+
+}
+
+//gs.info("DEL USERLIST= "+global.JSON.stringify(delusers));
+
+var updateusers=[];
+for(var record4=0; record4 < intersectid.length; record4++)
+{
+
+
+updateusers.push(snowemp[arrayUtil.indexOf(snowid,intersectid[record4])]);
+
+}
+
+//gs.info("UPDATE USERLIST= "+global.JSON.stringify(updateusers));
+// gs.info("INSERT USERLIST= "+global.JSON.stringify(newusers));
+// gs.info("INACTIVE USERLIST= "+global.JSON.stringify(delusers));
+
+// var str2=global.JSON.stringify(newusers);
+// var str3=global.JSON.stringify(delusers);
+var str=global.JSON.stringify(updateusers);
+activityOutput.UpdateCurrentUsers=global.JSON.stringify(updateusers);
+activityOutput.UpdateCurrentUsersCount=intersectid.length;
+activityOutput.HasNewUsers=global.JSON.stringify(newusers);
+activityOutput.HasNewUsersCount=diffidNew.length;
+activityOutput.HasDeactiveUsers=global.JSON.stringify(delusers);
+activityOutput.HasDeactiveUsersCount=diffidOld.length;
+
+//gs.info("NEW COUNT:;"+diffidNew.length);
+//gs.info("STR "+str);
+//gs.info("STR2 "+str2);
+//gs.info("STR3 "+str3);
+//gs.info("DEL= "+diffidOld);
+//gs.info("DIFF= "+diffidNew);
+//gs.info("INTER= "+ intersectid);
+
+
+]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-29 01:18:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dfd172b7dbe5dcd4f819cae43a961917</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>BRS_CompareUsers</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_dfd172b7dbe5dcd4f819cae43a961917</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-30 05:10:20</sys_updated_on>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=dfd172b7dbe5dcd4f819cae43a961917"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-29 01:18:07</sys_created_on>
+        <sys_id>9fd172b7dbe5dcd4f819cae43a961918</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-30 05:10:20</sys_updated_on>
+        <valid_from>2020-06-29 01:18:30</valid_from>
+        <valid_to/>
+        <version>64</version>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+        <wf_element_definition display_value="BRS_CompareUsers">dfd172b7dbe5dcd4f819cae43a961917</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=10bd8c57db8518d0f819cae43a961989^sys_id!=9fd172b7dbe5dcd4f819cae43a961918^version&lt;64">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=10bd8c57db8518d0f819cae43a961989">
+        <new_activity_definition>dfd172b7dbe5dcd4f819cae43a961917</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

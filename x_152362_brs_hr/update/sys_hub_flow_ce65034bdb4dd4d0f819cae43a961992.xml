@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Peridocilly trigger a workflow to sync users and approvers with Big Red Sky</description>
+        <internal_name>tcc_brs_sync_lzs</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>TCC_BRS_Sync_LZS</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:16:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ce65034bdb4dd4d0f819cae43a961992</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>TCC_BRS_Sync_LZS</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_hub_flow_ce65034bdb4dd4d0f819cae43a961992</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=ce65034bdb4dd4d0f819cae43a961992"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=ce65034bdb4dd4d0f819cae43a961992^sys_idNOT IN6af78fc3db8dd4d0f819cae43a9619dc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a2f78783db8dd4d0f819cae43a96195f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TCC_BRS_Sync_LZS">ce65034bdb4dd4d0f819cae43a961992</flow>
+        <inputs/>
+        <logic_definition display_value="Call a Workflow">e6edace2733203006715b45a4cf6a7b2</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:27:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6af78fc3db8dd4d0f819cae43a9619dc</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <ui_id>9311ec0c-0613-4df0-82d1-f8633348a151</ui_id>
+        <workflow_inputs/>
+        <workflow_reference display_value="(TCC) BRSSync_LZS">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6af78fc3db8dd4d0f819cae43a9619dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6af78fc3db8dd4d0f819cae43a9619dc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 00:13:21</sys_created_on>
+        <sys_id>05b968a7db4998d0f819cae43a96195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4aa624e8734303006715b45a4cf6a785</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=ce65034bdb4dd4d0f819cae43a961992^sys_idNOT IN61a5cf0fdb4dd4d0f819cae43a96193f"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TCC_BRS_Sync_LZS">ce65034bdb4dd4d0f819cae43a961992</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:17:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>61a5cf0fdb4dd4d0f819cae43a96193f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=61a5cf0fdb4dd4d0f819cae43a96193f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>61a5cf0fdb4dd4d0f819cae43a96193f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:17:43</sys_created_on>
+        <sys_id>25a5cf0fdb4dd4d0f819cae43a961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:17:43</sys_updated_on>
+        <value>1970-01-01 05:00:00</value>
+        <variable display_value="">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ce65034bdb4dd4d0f819cae43a961992^sys_idNOT IN0a65034bdb4dd4d0f819cae43a961995"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ce65034bdb4dd4d0f819cae43a961992</id>
+        <name>TCC_BRS_Sync_LZS</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:16:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0a65034bdb4dd4d0f819cae43a961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:16:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=ce65034bdb4dd4d0f819cae43a961992^sys_idNOT IN6af78fc3db8dd4d0f819cae43a9619dc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a2f78783db8dd4d0f819cae43a96195f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TCC_BRS_Sync_LZS">ce65034bdb4dd4d0f819cae43a961992</flow>
+        <inputs/>
+        <logic_definition display_value="Call a Workflow">e6edace2733203006715b45a4cf6a7b2</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:27:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6af78fc3db8dd4d0f819cae43a9619dc</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <ui_id>9311ec0c-0613-4df0-82d1-f8633348a151</ui_id>
+        <workflow_inputs/>
+        <workflow_reference display_value="(TCC) BRSSync_LZS">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6af78fc3db8dd4d0f819cae43a9619dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6af78fc3db8dd4d0f819cae43a9619dc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 00:13:21</sys_created_on>
+        <sys_id>05b968a7db4998d0f819cae43a96195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4aa624e8734303006715b45a4cf6a785</variable>
+    </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6af78fc3db8dd4d0f819cae43a9619dc^sys_idNOT IN12a920a7db4998d0f819cae43a961971"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>current</input_name>
+        <instance>6af78fc3db8dd4d0f819cae43a9619dc</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"current":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\nreturn shortDesc;\n*/\n\nreturn null;"}}</script>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 00:13:10</sys_created_on>
+        <sys_id>12a920a7db4998d0f819cae43a961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 00:13:10</sys_updated_on>
+    </sys_hub_input_scripts>
+</record_update>

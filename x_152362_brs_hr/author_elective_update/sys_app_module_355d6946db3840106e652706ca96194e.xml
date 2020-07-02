@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Web Services">18f23e670a0a0b2400c55b122be52373</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>User customized web service</hint>
+        <homepage/>
+        <image>images/icons/web_services_mapped.gifx</image>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>ImportPositions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>1050</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>v_ws_editor.do?sysparm_query=name=x_152362_brs_hr_importpositions</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-31 06:51:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>355d6946db3840106e652706ca96194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ImportPositions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_app_module_355d6946db3840106e652706ca96194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-31 06:51:07</sys_updated_on>
+        <timeline_page/>
+        <title>ImportPositions</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_app_module_355d6946db3840106e652706ca96194e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="System Web Services">18f23e670a0a0b2400c55b122be52373</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>User customized web service</hint>
+        <homepage/>
+        <image>images/icons/web_services_mapped.gifx</image>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>ImportPositions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>1050</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>v_ws_editor.do?sysparm_query=name=x_152362_brs_hr_importpositions</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-31 06:51:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>355d6946db3840106e652706ca96194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ImportPositions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_app_module_355d6946db3840106e652706ca96194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-31 06:51:07</sys_updated_on>
+        <timeline_page/>
+        <title>ImportPositions</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>-1458052597</payload_hash>
+        <record_name>ImportPositions</record_name>
+        <reverted_from/>
+        <source>c9a91544db149490c91c89e4059619e9</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-04-15 23:57:20</sys_created_on>
+        <sys_id>a6b91184db149490c91c89e405961996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17180468f2b0000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-15 23:57:20</sys_updated_on>
+        <type>Module</type>
+        <update_guid>66b911844b1494901e9e7f7932845496</update_guid>
+        <update_guid_history>66b911844b1494901e9e7f7932845496:-1458052597</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 02/06/2020 08:14:01">2fc44b0fdb4dd4d0f819cae43a961959</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 22:14:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>12571655770340139a773b46a0b888b1</sys_id>
+        <sys_metadata>355d6946db3840106e652706ca96194e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ImportPositions</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_app_module_355d6946db3840106e652706ca96194e</sys_update_name>
+        <sys_update_version display_value="sys_app_module_355d6946db3840106e652706ca96194e">a6b91184db149490c91c89e405961996</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:14:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

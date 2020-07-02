@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"Token","type":"STRING","mandatory":false},{"name":"SNNewUsers","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script><![CDATA[var parser = new global.JSON();
+
+//activityInput.SNNewUsers=parser.decode("{\"data\":"+activityInput.SNNewUsers);
+var snuseer = parser.encode(activityInput.SNNewUsers);
+
+var jsonEmployeesArray = [];
+
+
+// {
+//   "data": [
+//     {
+
+for (var record = 0; record < snuseer.length; record++) {
+    var jsonEmployee = {};
+    jsonEmployee.user_type = "Standard";
+    jsonEmployee.title = "";
+    jsonEmployee.status = "Active";
+    jsonEmployee.suspended = "f";
+    jsonEmployee.given_names = snuseer.given_names.toString();
+    jsonEmployee.surname = snuseer.surname.toString();
+    jsonEmployee.position_title = "";
+    jsonEmployee.email = snuseer.email.toString();
+    jsonEmployee.contact_phone = snuseer.contact_phone.toString();
+    jsonEmployee.username = snuseer.username.toString();
+
+    jsonEmployee.timezone = "Australia/Brisbane";
+
+    jsonEmployeesArray.push(jsonEmployee);
+
+
+}
+//Encode as JSON and set it to the output as a string
+jsonEmployeesArray = new global.JSON().encode(jsonEmployeesArray);
+activityInput.SNNewUsers = jsonEmployeesArray.toString();
+//     }
+//   ]
+// }
+
+
+
+gs.info("activityInput.SNNewUsers" + activityInput.SNNewUsers);
+gs.info("activityInput.Token" + activityInput.Token);]]></input_process_script>
+        <input_transform>{"web_service_message":"d520fb36db8194d0f819cae43a9619bc","web_service_message_function":"e2233bf6db8194d0f819cae43a9619c7","web_service_endpoint":"","parameters":"[{\"name\":\"Token\",\"value\":\"${activityInput.Token}\",\"additional_attribute\":\"\"},{\"name\":\"Content\",\"value\":\"${activityInput.SNNewUsers}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables/>
+        <name>AddSNUsers</name>
+        <output_meta/>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-23 00:14:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4dc9e7f9db6510d4f819cae43a9619b2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>AddSNUsers</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_4dc9e7f9db6510d4f819cae43a9619b2</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-23 00:18:31</sys_updated_on>
+        <version_container_id>cef98b1cdb659094f819cae43a961936</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=4dc9e7f9db6510d4f819cae43a9619b2"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-23 00:14:30</sys_created_on>
+        <sys_id>0dc9e7f9db6510d4f819cae43a9619b3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-23 00:18:31</sys_updated_on>
+        <valid_from>2020-06-23 00:15:10</valid_from>
+        <valid_to/>
+        <version>4</version>
+        <version_container_id>cef98b1cdb659094f819cae43a961936</version_container_id>
+        <wf_element_definition display_value="AddSNUsers">4dc9e7f9db6510d4f819cae43a9619b2</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=cef98b1cdb659094f819cae43a961936^sys_id!=0dc9e7f9db6510d4f819cae43a9619b3^version&lt;4">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=cef98b1cdb659094f819cae43a961936">
+        <new_activity_definition>4dc9e7f9db6510d4f819cae43a9619b2</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

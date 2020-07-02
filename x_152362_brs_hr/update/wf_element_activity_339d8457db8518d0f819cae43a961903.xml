@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"BRS_Users","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]},{"name":"SNOW_Employees","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>BRS_CompareUsers</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"AddUsers","type":"DATA_OBJECT","properties":[]},{"name":"UpdateUsers","type":"DATA_OBJECT","properties":[]},{"name":"InactiveUsers","type":"DATA_OBJECT","properties":[]}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 03:32:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>339d8457db8518d0f819cae43a961903</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>BRS_CompareUsers</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_339d8457db8518d0f819cae43a961903</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-02 03:42:40</sys_updated_on>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=339d8457db8518d0f819cae43a961903"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 03:32:29</sys_created_on>
+        <sys_id>50bd8c57db8518d0f819cae43a96198a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-02 03:42:40</sys_updated_on>
+        <valid_from>2020-06-02 03:38:39</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+        <wf_element_definition display_value="BRS_CompareUsers">339d8457db8518d0f819cae43a961903</wf_element_definition>
+    </wf_versionable>
+</record_update>

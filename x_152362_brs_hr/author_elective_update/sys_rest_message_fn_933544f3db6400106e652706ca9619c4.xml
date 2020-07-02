@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{"username":"123e4567-e89b-12d3-a456-426655440000","password":"apipassword", "client": "tcc"}</content>
+        <function_name>PostforToken</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>BigRedSky [ PostforToken ]</qualified_name>
+        <rest_endpoint>https://api-training.bigredsky.com/api/login-check</rest_endpoint>
+        <rest_message display_value="BigRedSky">bc94c073db6800106e652706ca96196e</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-23 23:29:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>933544f3db6400106e652706ca9619c4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>PostforToken</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_933544f3db6400106e652706ca9619c4</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 06:39:54</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_rest_message_fn_933544f3db6400106e652706ca9619c4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content>{"username":"123e4567-e89b-12d3-a456-426655440000","password":"apipassword", "client": "tcc"}</content><function_name>PostforToken</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>BigRedSky [ PostforToken ]</qualified_name><rest_endpoint>https://api-training.bigredsky.com/api/login-check</rest_endpoint><rest_message display_value="BigRedSky">bc94c073db6800106e652706ca96196e</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-23 23:29:57</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>933544f3db6400106e652706ca9619c4</sys_id><sys_mod_count>3</sys_mod_count><sys_name>PostforToken</sys_name><sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope><sys_update_name>sys_rest_message_fn_933544f3db6400106e652706ca9619c4</sys_update_name><sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by><sys_updated_on>2020-06-01 06:39:54</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>-1744639248</payload_hash>
+        <record_name>PostforToken</record_name>
+        <reverted_from/>
+        <source>bdd95d04db149490c91c89e40596195f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 06:39:54</sys_created_on>
+        <sys_id>880fabfedb4194d0f819cae43a961976</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1726e9ba96c0000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 06:39:54</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>400fabfeaa4194d0c89513056bfe4e76</update_guid>
+        <update_guid_history>400fabfeaa4194d0c89513056bfe4e76:-1744639248,36de27b2648194d012f1f99939408bdd:1746438994,76b951840d14949080bf503f37e1f78b:-1082761338</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 06:44:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>347cc2568d61449c8c62e0a1bb810441</sys_id>
+        <sys_metadata>933544f3db6400106e652706ca9619c4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PostforToken</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_933544f3db6400106e652706ca9619c4</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_933544f3db6400106e652706ca9619c4">880fabfedb4194d0f819cae43a961976</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 06:44:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Vacancy</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_152362_brs_hr_vacancy</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class/>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-03 22:32:15</sys_created_on>
+        <sys_id>cc21689bdb3000106e652706ca9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vacancy</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_db_object_cc21689bdb3000106e652706ca9619b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-03 22:32:15</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_152362_brs_hr.vacancy_user" name="x_152362_brs_hr.vacancy_user">c981ec5bdb3000106e652706ca9619f6</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_db_object_cc21689bdb3000106e652706ca9619b5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Vacancy</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_152362_brs_hr_vacancy</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class/>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-03 22:32:15</sys_created_on>
+        <sys_id>cc21689bdb3000106e652706ca9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vacancy</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_db_object_cc21689bdb3000106e652706ca9619b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-03 22:32:15</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_152362_brs_hr.vacancy_user" name="x_152362_brs_hr.vacancy_user">c981ec5bdb3000106e652706ca9619f6</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>-1842880306</payload_hash>
+        <record_name>Vacancy</record_name>
+        <reverted_from/>
+        <source>c8a99144db149490c91c89e40596194b</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-04-15 23:56:54</sys_created_on>
+        <sys_id>dca9d144db149490c91c89e405961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17180462a2d0000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-15 23:56:54</sys_updated_on>
+        <type>Table</type>
+        <update_guid>9ca9d144671494905c954af862a77b17</update_guid>
+        <update_guid_history>9ca9d144671494905c954af862a77b17:-1842880306</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-29 06:01:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>1d6b78dbc6fd47e8843933c97ed9c290</sys_id>
+        <sys_metadata>cc21689bdb3000106e652706ca9619b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vacancy</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_db_object_cc21689bdb3000106e652706ca9619b5</sys_update_name>
+        <sys_update_version display_value="sys_db_object_cc21689bdb3000106e652706ca9619b5">dca9d144db149490c91c89e405961917</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-29 06:01:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

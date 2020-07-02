@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"BRSNewUsers","type":"STRING","mandatory":false},{"name":"BRSUpdateUsers","type":"STRING","mandatory":false},{"name":"BRSDisableUsers","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Convert to BRS POST New User</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"POSTNewUsers","type":"STRING"},{"name":"PATCHUpdateUsers","type":"STRING"},{"name":"PATCHDisableUsers","type":"STRING"}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[var parser = new global.JSON();
+
+//Add New users list
+var snuser = activityInput.BRSNewUsers;
+var jsonEmployeesArray = [];
+//gs.info("SNUSER: "+ parser.encode(snuser));
+snuser = parser.decode(snuser);
+// {
+//   "data": [
+//     {
+ 
+for (var record = 0; record < snuser.length; record++) {
+   var jsonEmployee = {};
+    jsonEmployee.user_type = "Restricted";
+    jsonEmployee.title = snuser[record].title;
+    jsonEmployee.status = "Active";
+    jsonEmployee.suspended = "f";
+    jsonEmployee.given_names = snuser[record].given_names;
+    jsonEmployee.surname = snuser[record].surname;
+    jsonEmployee.position_title = snuser[record].position_title;
+    jsonEmployee.email = snuser[record].email;
+    jsonEmployee.contact_phone = snuser[record].contact_phone;
+    jsonEmployee.username = snuser[record].username;
+    jsonEmployee.timezone = "Australia/Brisbane";
+
+    jsonEmployeesArray.push(jsonEmployee);
+
+
+}
+//Encode as JSON and set it to the output as a string
+jsonEmployeesArray = new global.JSON().encode(jsonEmployeesArray);
+activityOutput.POSTNewUsers ="{\"data\":"+jsonEmployeesArray+"}";
+
+//     }
+//   ]
+// }
+
+//activityOutput.POSTNewUsers =  snuser.toString();
+
+gs.info("activityInput.SNNewUsers" +activityOutput.POSTNewUsers);
+gs.info("SNUSER: "+snuser);
+gs.info("snuser.length: "+snuser.length);
+
+
+
+
+//Update Users list
+
+var updateUsers = activityOutput.PATCHUpdateUsers;
+var jsonUpdateUsers = [];
+//gs.info("SNUSER: "+ parser.encode(snuser));
+snuser = parser.decode(snuser);
+// {
+//   "data": [
+//     {
+ 
+for (var record1 = 0; record1 < snuser.length; record1++) {
+   var jsonUpdates = {};
+    jsonUpdates.user_type = "Restricted";
+    jsonUpdates.title = updateUsers[record1].title;
+    jsonUpdates.status = "Active";
+    jsonUpdates.suspended = "f";
+    jsonUpdates.given_names = updateUsers[record1].given_names;
+    jsonUpdates.surname = updateUsers[record1].surname;
+    jsonUpdates.position_title = updateUsers[record1].position_title;
+    jsonUpdates.email = updateUsers[record1].email;
+    jsonUpdates.contact_phone = updateUsers[record1].contact_phone;
+    jsonUpdates.username = updateUsers[record1].username;
+    jsonUpdates.timezone = "Australia/Brisbane";
+
+    jsonUpdateUsers.push(jsonEmployee);
+
+
+}
+//Encode as JSON and set it to the output as a string
+jsonUpdateUsers = new global.JSON().encode(jsonUpdateUsers);
+activityOutput.PATCHUpdateUsers ="{\"data\":"+jsonUpdateUsers+"}";
+
+
+activityOutput.PATCHDisableUsers="";]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-26 00:40:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>548c03f2db2d18d4f819cae43a9619d5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Convert to BRS POST New User</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_548c03f2db2d18d4f819cae43a9619d5</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-26 00:52:33</sys_updated_on>
+        <version_container_id>a9c13b35dbe510d4f819cae43a96190b</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=548c03f2db2d18d4f819cae43a9619d5"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-26 00:40:35</sys_created_on>
+        <sys_id>148c03f2db2d18d4f819cae43a9619d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-26 00:52:33</sys_updated_on>
+        <valid_from>2020-06-26 00:49:37</valid_from>
+        <valid_to/>
+        <version>30</version>
+        <version_container_id>a9c13b35dbe510d4f819cae43a96190b</version_container_id>
+        <wf_element_definition display_value="Convert to BRS POST New User">548c03f2db2d18d4f819cae43a9619d5</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=a9c13b35dbe510d4f819cae43a96190b^sys_id!=148c03f2db2d18d4f819cae43a9619d6^version&lt;30">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=a9c13b35dbe510d4f819cae43a96190b">
+        <new_activity_definition>548c03f2db2d18d4f819cae43a9619d5</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

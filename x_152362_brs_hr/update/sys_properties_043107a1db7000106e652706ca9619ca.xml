@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>URL for API Endpoint</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_152362_brs_hr.BRS_APIEndpoint_DEV</name>
+        <read_roles/>
+        <suffix>BRS_APIEndpoint_DEV</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-29 23:41:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>043107a1db7000106e652706ca9619ca</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_152362_brs_hr.BRS_APIEndpoint_DEV</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_properties_043107a1db7000106e652706ca9619ca</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-16 03:14:43</sys_updated_on>
+        <type>string</type>
+        <value>https://api-training.bigredsky.com/api/v1/</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=043107a1db7000106e652706ca9619ca"/>
+</record_update>

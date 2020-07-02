@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Powershell">59155499eb512100b2f88a7af106feae</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description>Takes the employee JSON list from Big Red Sky and  Service Now and returns a list of Inactive, New  to update BRS</description>
+        <image>images/heisenberg_icons/workflow_ie8/provider_powershell.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"SNOWEmployees","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]},{"name":"GRSEmployees","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"source":"","script_type":"command","command":"","midScriptFile":"","powershellVariables":"[]","use_mid_service_account":"true","credential_tag":"","midCapabilities":"427709a60a0006bc7d2904e99132532d"}</input_transform>
+        <local_variables/>
+        <name>(TCC) CompareBRS to SNOW Employees</name>
+        <output_meta/>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:46:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9f781cbddbd91c14f819cae43a96191d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>(TCC) CompareBRS to SNOW Employees</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_9f781cbddbd91c14f819cae43a96191d</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-15 23:56:22</sys_updated_on>
+        <version_container_id>5709583ddbd91c14f819cae43a9619bd</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f781cbddbd91c14f819cae43a96191d"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:46:55</sys_created_on>
+        <sys_id>1309583ddbd91c14f819cae43a9619bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-15 23:56:22</sys_updated_on>
+        <valid_from>2020-06-15 23:56:22</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>5709583ddbd91c14f819cae43a9619bd</version_container_id>
+        <wf_element_definition display_value="(TCC) CompareBRS to SNOW Employees">9f781cbddbd91c14f819cae43a96191d</wf_element_definition>
+    </wf_versionable>
+</record_update>

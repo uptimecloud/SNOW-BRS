@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">390957604f2012008767a3b11310c7fc</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-04-15 23:56:55</sys_created_on>
+        <sys_id>34a91544db149490c91c89e40596192c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-15 23:56:55</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

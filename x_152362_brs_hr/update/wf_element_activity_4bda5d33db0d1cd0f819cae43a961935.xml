@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"APIPassword","type":"STRING","mandatory":true},{"name":"APIUser","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"d520fb36db8194d0f819cae43a9619bc","web_service_message_function":"0b403736db8194d0f819cae43a96190c","web_service_endpoint":"","parameters":"[{\"name\":\"APIUsername\",\"value\":\"${workflow.scratchpad.grsUser}\",\"additional_attribute\":\"\"},{\"name\":\"APIPassword\",\"value\":\"${workflow.scratchpad.grsPassword}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[]}</local_variables>
+        <name>BigRedSkyToken</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"token","type":"STRING"}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 22:26:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4bda5d33db0d1cd0f819cae43a961935</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>BigRedSkyToken</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_4bda5d33db0d1cd0f819cae43a961935</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 23:41:44</sys_updated_on>
+        <version_container_id>0773e307db4118d0f819cae43a961952</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=4bda5d33db0d1cd0f819cae43a961935"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 22:26:36</sys_created_on>
+        <sys_id>07da5d33db0d1cd0f819cae43a961938</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 23:41:44</sys_updated_on>
+        <valid_from>2020-06-03 22:30:07</valid_from>
+        <valid_to/>
+        <version>8</version>
+        <version_container_id>0773e307db4118d0f819cae43a961952</version_container_id>
+        <wf_element_definition display_value="BigRedSkyToken">4bda5d33db0d1cd0f819cae43a961935</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="BigRedSkyToken">4bda5d33db0d1cd0f819cae43a961935</activity_definition>
+        <condition/>
+        <derived_definition>315ae867db4998d0f819cae43a961908</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Always</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-03 22:26:36</sys_created_on>
+        <sys_id>53da5173db0d1cd0f819cae43a961968</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-03 22:26:36</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=0773e307db4118d0f819cae43a961952^sys_id!=07da5d33db0d1cd0f819cae43a961938^version&lt;8">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=0773e307db4118d0f819cae43a961952">
+        <new_activity_definition>4bda5d33db0d1cd0f819cae43a961935</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

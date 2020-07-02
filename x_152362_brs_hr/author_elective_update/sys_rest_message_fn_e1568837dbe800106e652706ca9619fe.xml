@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>OnBoardingDetails</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>BigRedSky [ OnBoardingDetails ]</qualified_name>
+        <rest_endpoint>https://services-dev.bigredsky.com/BigRedSkyASAP/OnBoardingExternalAPI/dev/index.php/api/getOnBoardingFields</rest_endpoint>
+        <rest_message display_value="BigRedSky">bc94c073db6800106e652706ca96196e</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-23 23:35:56</sys_created_on>
+        <sys_id>e1568837dbe800106e652706ca9619fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OnBoardingDetails</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_e1568837dbe800106e652706ca9619fe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-23 23:35:56</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_rest_message_fn_e1568837dbe800106e652706ca9619fe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>OnBoardingDetails</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>BigRedSky [ OnBoardingDetails ]</qualified_name>
+        <rest_endpoint>https://services-dev.bigredsky.com/BigRedSkyASAP/OnBoardingExternalAPI/dev/index.php/api/getOnBoardingFields</rest_endpoint>
+        <rest_message display_value="BigRedSky">bc94c073db6800106e652706ca96196e</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-23 23:35:56</sys_created_on>
+        <sys_id>e1568837dbe800106e652706ca9619fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OnBoardingDetails</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_e1568837dbe800106e652706ca9619fe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-23 23:35:56</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>]]></payload>
+        <payload_hash>1899127883</payload_hash>
+        <record_name>OnBoardingDetails</record_name>
+        <reverted_from/>
+        <source>c9a91544db149490c91c89e4059619e9</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-04-15 23:57:21</sys_created_on>
+        <sys_id>b6b95184db149490c91c89e40596198f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171804694e00000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-15 23:57:21</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>76b951840014949008d72d24ce0e948f</update_guid>
+        <update_guid_history>76b951840014949008d72d24ce0e948f:1899127883</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-01 06:44:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>91fdf59be31f47d6b36823dcef7face4</sys_id>
+        <sys_metadata>e1568837dbe800106e652706ca9619fe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OnBoardingDetails</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_e1568837dbe800106e652706ca9619fe</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_e1568837dbe800106e652706ca9619fe">b6b95184db149490c91c89e40596198f</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-01 06:44:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

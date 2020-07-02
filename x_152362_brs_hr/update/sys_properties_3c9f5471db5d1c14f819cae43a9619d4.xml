@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Users to be excluded from the update process, comma seperated list</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_152362_brs_hr.UserExceptions</name>
+        <read_roles/>
+        <suffix>UserExceptions</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 23:17:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3c9f5471db5d1c14f819cae43a9619d4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_152362_brs_hr.UserExceptions</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_properties_3c9f5471db5d1c14f819cae43a9619d4</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-09 23:18:14</sys_updated_on>
+        <type>string</type>
+        <value/>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=3c9f5471db5d1c14f819cae43a9619d4"/>
+</record_update>

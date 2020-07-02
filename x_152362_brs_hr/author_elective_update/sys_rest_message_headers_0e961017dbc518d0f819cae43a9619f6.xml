@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers">
+    <sys_rest_message_headers action="DELETE">
+        <name>Content-Type</name>
+        <rest_message display_value="BigRedSky_PRD">0456d0dfdb8518d0f819cae43a96196e</rest_message>
+        <sys_class_name>sys_rest_message_headers</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 05:20:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e961017dbc518d0f819cae43a9619f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_headers_0e961017dbc518d0f819cae43a9619f6</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-02 05:20:44</sys_updated_on>
+        <value>application/json</value>
+    </sys_rest_message_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_rest_message_headers_0e961017dbc518d0f819cae43a9619f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers"><sys_rest_message_headers action="INSERT_OR_UPDATE"><name>Content-Type</name><rest_message display_value="BigRedSky_PRD">0456d0dfdb8518d0f819cae43a96196e</rest_message><sys_class_name>sys_rest_message_headers</sys_class_name><sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by><sys_created_on>2020-06-02 05:20:44</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>0e961017dbc518d0f819cae43a9619f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Content-Type</sys_name><sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope><sys_update_name>sys_rest_message_headers_0e961017dbc518d0f819cae43a9619f6</sys_update_name><sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by><sys_updated_on>2020-06-02 05:20:44</sys_updated_on><value>application/json</value></sys_rest_message_headers></record_update>]]></payload>
+        <payload_hash>-1421264605</payload_hash>
+        <record_name>Content-Type</record_name>
+        <reverted_from/>
+        <source>bdd95d04db149490c91c89e40596195f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 05:20:44</sys_created_on>
+        <sys_id>0276e057db4918d0f819cae43a961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172737988c90000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-02 05:20:44</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>0a76e0577e4918d0efe153fafc822d70</update_guid>
+        <update_guid_history>0a76e0577e4918d0efe153fafc822d70:-1421264605</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-01 23:53:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_headers">sys_rest_message_headers</sys_db_object>
+        <sys_id>4c9cacb39f6549bfbe809f9db470ae39</sys_id>
+        <sys_metadata>0e961017dbc518d0f819cae43a9619f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_rest_message_headers_0e961017dbc518d0f819cae43a9619f6</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_headers_0e961017dbc518d0f819cae43a9619f6">0276e057db4918d0f819cae43a961971</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-01 23:53:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

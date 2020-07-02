@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="DELETE">
+        <name>brs-api-auth</name>
+        <rest_message_function display_value="GetApproverList">a0865439dbd91c14f819cae43a96198c</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:37:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b1d69479dbd91c14f819cae43a961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>brs-api-auth</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_b1d69479dbd91c14f819cae43a961905</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-09 22:37:53</sys_updated_on>
+        <value>bearer ${Token}</value>
+    </sys_rest_message_fn_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_rest_message_fn_headers_b1d69479dbd91c14f819cae43a961905</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers"><sys_rest_message_fn_headers action="INSERT_OR_UPDATE"><name>brs-api-auth</name><rest_message_function display_value="GetApproverList">a0865439dbd91c14f819cae43a96198c</rest_message_function><sys_class_name>sys_rest_message_fn_headers</sys_class_name><sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by><sys_created_on>2020-06-09 22:37:53</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>b1d69479dbd91c14f819cae43a961905</sys_id><sys_mod_count>0</sys_mod_count><sys_name>brs-api-auth</sys_name><sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope><sys_update_name>sys_rest_message_fn_headers_b1d69479dbd91c14f819cae43a961905</sys_update_name><sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by><sys_updated_on>2020-06-09 22:37:53</sys_updated_on><value>bearer ${Token}</value></sys_rest_message_fn_headers></record_update>]]></payload>
+        <payload_hash>1227537591</payload_hash>
+        <record_name>brs-api-auth</record_name>
+        <reverted_from/>
+        <source>d59676b3db855cd0f819cae43a9619cf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:37:54</sys_created_on>
+        <sys_id>03f61c39dbd91c14f819cae43a9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1729b3b99d10000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-09 22:37:54</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>0bf61c3991d91c143bbbc7672f819ba7</update_guid>
+        <update_guid_history>0bf61c3991d91c143bbbc7672f819ba7:1227537591</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-01 23:53:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn_headers">sys_rest_message_fn_headers</sys_db_object>
+        <sys_id>0abb50eaee2543ce85ad969e47c33a04</sys_id>
+        <sys_metadata>b1d69479dbd91c14f819cae43a961905</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>brs-api-auth</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_headers_b1d69479dbd91c14f819cae43a961905</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_headers_b1d69479dbd91c14f819cae43a961905">03f61c39dbd91c14f819cae43a9619a8</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-01 23:53:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

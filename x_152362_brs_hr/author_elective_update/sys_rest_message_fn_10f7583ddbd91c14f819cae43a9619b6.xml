@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>${Content}</content>
+        <function_name>AddUser</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>BigRedSky_PRD [ AddUser ]</qualified_name>
+        <rest_endpoint>https://api.bigredsky.com/api/v1/user/add</rest_endpoint>
+        <rest_message display_value="BigRedSky_PRD">0456d0dfdb8518d0f819cae43a96196e</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:42:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>10f7583ddbd91c14f819cae43a9619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AddUser</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_10f7583ddbd91c14f819cae43a9619b6</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-09 22:42:59</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_rest_message_fn_10f7583ddbd91c14f819cae43a9619b6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content>${Content}</content><function_name>AddUser</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>BigRedSky_PRD [ AddUser ]</qualified_name><rest_endpoint>https://api.bigredsky.com/api/v1/user/add</rest_endpoint><rest_message display_value="BigRedSky_PRD">0456d0dfdb8518d0f819cae43a96196e</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by><sys_created_on>2020-06-09 22:42:59</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>10f7583ddbd91c14f819cae43a9619b6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AddUser</sys_name><sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope><sys_update_name>sys_rest_message_fn_10f7583ddbd91c14f819cae43a9619b6</sys_update_name><sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by><sys_updated_on>2020-06-09 22:42:59</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>931395698</payload_hash>
+        <record_name>AddUser</record_name>
+        <reverted_from/>
+        <source>d59676b3db855cd0f819cae43a9619cf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-09 22:42:59</sys_created_on>
+        <sys_id>3d2858b9dbd91c14f819cae43a961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1729b40445b0000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-09 22:42:59</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>352858b9a3d91c14793eca4123658915</update_guid>
+        <update_guid_history>352858b9a3d91c14793eca4123658915:931395698</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-01 23:53:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>9fcd2782695a444ca4d3c913973312e9</sys_id>
+        <sys_metadata>10f7583ddbd91c14f819cae43a9619b6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AddUser</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_10f7583ddbd91c14f819cae43a9619b6</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_10f7583ddbd91c14f819cae43a9619b6">3d2858b9dbd91c14f819cae43a961915</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-01 23:53:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>Token</name>
+        <rest_message_function display_value="AddUser">e2233bf6db8194d0f819cae43a9619c7</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 01:44:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c1f47f0bdbc118d0f819cae43a96196b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Token</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_c1f47f0bdbc118d0f819cae43a96196b</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-30 03:49:27</sys_updated_on>
+        <type>string</type>
+        <value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTM0ODg0MDAsImV4cCI6MTU5MzQ5MjAwMCwicm9sZXMiOltdLCJ1c2VybmFtZSI6Ijg0YTVmZjk5LWIxYjItNGYwYS05MmM1LWFhZWY5NGFlYTdlOCJ9.PWL0k2TJ7lImetVEs3SyHk0993LeFToAv0nnUMterk_Rm7nb2OLjVVhZFgoDCpW-iNBCH6sOVGdCPu2KvoyjzlIvF8GeqDau72r1wYFexPOB2iRYr8YBg9YjuPYCzumITugKr7ggEmacwWWKvq8kkYaRwwI78Y1KJ0OhcqAextRLNqwTNWXLwdKB3Ly5rAC3a3IvhhT4AiQ_1-PHTaMh07KQ04wKgOpJI5OHi4Rc6Nm5AimdsMb_YWuWenP1jiHkWImLVgmYIkWvS9rFh1q1TEhgzEvZ189xUnXOuE1ovMloH-8Gw_PNXgTT6GX-5kU3JkTZXIco4kAdQ-uTibk_B5FMpauKBXs2h_qmQtCLSKGz-JRCtYqxiyiYWBBkdAl3DET3kkYAUr0zqonUoSboo4lfHBZYA30NMA55iC2Ls5sT5PDUVwjtXSCHbq7U8AH_6NTyncszdsvVlzgcDhHE77I-wvQQSKcqIzHzdu0dug3LhTjhSMYExwicO8RY5pX4zDGOWES6JjzBQT55o48maf9Gjxx2J4RLJ9lCyBezHJTE6wxTfvJj2Qb041cPaw5vkC228s_KUHHbMBhQF88tNbT2Wds5nDIp34I4x5bjlEHJQD1Ld6f0wfTP2Fh2y-lJ59qpiA5Nx6OFXHdHXiZk0lJ57fERWxmXd5frez04zt8</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"Token","type":"STRING","mandatory":false},{"name":"Page","type":"INTEGER","mandatory":false},{"name":"BRSEndpoint","type":"STRING","mandatory":false},{"name":"API_Endpoint","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"d520fb36db8194d0f819cae43a9619bc","web_service_message_function":"5292b3f6db8194d0f819cae43a96193d","web_service_endpoint":"${activityInput.BRSEndpoint}","parameters":"[{\"name\":\"page\",\"value\":\"${activityInput.Page}\",\"additional_attribute\":\"\"},{\"name\":\"Token\",\"value\":\"${activityInput.Token}\",\"additional_attribute\":\"\"},{\"name\":\"endpoint\",\"value\":\"${activityInput.API_Endpoint}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables/>
+        <name>BRS_GetUserList</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"data","type":"DATA_OBJECT","properties":[{"name":"code","type":"INTEGER"},{"name":"object","type":"DATA_OBJECT","properties":[{"name":"users","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"contact_phone","type":"STRING"},{"name":"surname","type":"STRING"},{"name":"position_title","type":"STRING"},{"name":"given_names","type":"STRING"},{"name":"email","type":"STRING"},{"name":"status","type":"STRING"},{"name":"username","type":"STRING"}]}]}]}]},{"name":"links","type":"DATA_OBJECT","properties":[{"name":"next","type":"STRING"},{"name":"last","type":"STRING"},{"name":"prev","type":"STRING"},{"name":"self","type":"STRING"},{"name":"first","type":"STRING"}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","description":"","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityOutput.header","description":"","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","children":"[]","translation":"$"},{"toLink":"activityOutput.body","description":"","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityOutput.error","description":"","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityOutput.output","description":"","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","children":"[]","translation":"$"}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.status_code":{"payload":200,"type":"direct"},"executionResult.header":{"payload":"{\"X-Robots-Tag\":\"noindex\",\"Server\":\"Apache\",\"Cache-Control\":\"no-cache, private\",\"Content-Length\":\"7558\",\"Date\":\"Tue, 02 Jun 2020 23:41:54 GMT\",\"X-Powered-By\":\"PHP/7.3.17\",\"Content-Type\":\"application/json\"}","type":"direct"},"executionResult.body":{"payload":"{\"links\":{\"self\":\"http:\\/\\/api-training.bigredsky.com\\/api\\/v1\\/user\\/list\\/1\",\"first\":\"http:\\/\\/api-training.bigredsky.com\\/api\\/v1\\/user\\/list\\/1\",\"last\":\"http:\\/\\/api-training.bigredsky.com\\/api\\/v1\\/user\\/list\\/37\",\"next\":\"http:\\/\\/api-training.bigredsky.com\\/api\\/v1\\/user\\/list\\/2\",\"prev\":\"\"},\"data\":{\"object\":{\"users\":[{\"status\":\"Active\",\"given_names\":\"tccsa\",\"surname\":\"tcc\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"tccsa\"},{\"status\":\"Active\",\"given_names\":\"Sophia\",\"surname\":\"Elliss\",\"position_title\":\"Recruitment and People Services Officer\",\"email\":\"sophia.elliss@townsville.qld.gov.au\",\"contact_phone\":\"0747279027\",\"username\":\"se5\"},{\"status\":\"Active\",\"given_names\":\"dchandra\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"brsdcsa\"},{\"status\":\"Active\",\"given_names\":\"Cedric \",\"surname\":\"Du peloux\",\"position_title\":null,\"email\":\"cedric.dupelouxdepraron@thomsonreuters.com\",\"contact_phone\":\"0426955169\",\"username\":\"c.pelouxsa\"},{\"status\":\"Active\",\"given_names\":\"weiqing\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"amao2sa\"},{\"status\":\"Active\",\"given_names\":\"Kevin\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"kkevin33sa\"},{\"status\":\"Active\",\"given_names\":\"Jane\",\"surname\":\"True BRS\",\"position_title\":null,\"email\":\"jane.true@thomsonreuters.com\",\"contact_phone\":null,\"username\":\"janesa\"},{\"status\":\"Active\",\"given_names\":\"Anopan\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"akansa\"},{\"status\":\"Active\",\"given_names\":\"Neel\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"nrcorpsa\"},{\"status\":\"Active\",\"given_names\":\"Nikita\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"narorasa\"},{\"status\":\"Active\",\"given_names\":\"Vishal\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"vpatelsa\"},{\"status\":\"Active\",\"given_names\":\"bill\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"bcurriesa\"},{\"status\":\"Active\",\"given_names\":\"Rebecca\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"rwotzkosa\"},{\"status\":\"Active\",\"given_names\":\"Joel\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"jdubbersa\"},{\"status\":\"Active\",\"given_names\":\"Sharlene\",\"surname\":\"Wong\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"swongsa\"},{\"status\":\"Active\",\"given_names\":\"KerryMaynard\",\"surname\":\"BRS\",\"position_title\":null,\"email\":\"kerry.maynard@thomsonreuters.com\",\"contact_phone\":null,\"username\":\"kmaynardsa\"},{\"status\":\"Active\",\"given_names\":\"Lewis\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"betlsa\"},{\"status\":\"Active\",\"given_names\":\"Samantha\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"ssullivansa\"},{\"status\":\"Active\",\"given_names\":\"Bijay\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"bjranjitsa\"},{\"status\":\"Active\",\"given_names\":\"Nathan\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"nfeiglinsa\"},{\"status\":\"Active\",\"given_names\":\"Rachel\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"rrawardsa\"},{\"status\":\"Active\",\"given_names\":\"KerryMcCurdy\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"kmccurdysa\"},{\"status\":\"Active\",\"given_names\":\"Shayne\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"sbartlettsa\"},{\"status\":\"Active\",\"given_names\":\"Nary\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"callejansa\"},{\"status\":\"Active\",\"given_names\":\"Filda\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"fkecisa\"},{\"status\":\"Active\",\"given_names\":\"Chaitra\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"chaitralsa\"},{\"status\":\"Active\",\"given_names\":\"Andy Eddleston\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"aeddlestonsa\"},{\"status\":\"Active\",\"given_names\":\"Tom Dean\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"tdeansa\"},{\"status\":\"Active\",\"given_names\":\"dchandra\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"brsdcsu\"},{\"status\":\"Active\",\"given_names\":\"Cedric Du\",\"surname\":\"De praron\",\"position_title\":null,\"email\":\"cedric.dupelouxdepraron@thomsonreuters.com\",\"contact_phone\":\"0426955169\",\"username\":\"c.pelouxsu\"},{\"status\":\"Active\",\"given_names\":\"weiqing\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"amao2su\"},{\"status\":\"Active\",\"given_names\":\"Kevin\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"kkevin33su\"},{\"status\":\"Active\",\"given_names\":\"Jane\",\"surname\":\"True BRS\",\"position_title\":null,\"email\":\"jane.true@thomsonreuters.com\",\"contact_phone\":null,\"username\":\"janesu\"},{\"status\":\"Active\",\"given_names\":\"Anopan\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"akansu\"},{\"status\":\"Active\",\"given_names\":\"Neel\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"nrcorpsu\"},{\"status\":\"Active\",\"given_names\":\"Nikita\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"narorasu\"},{\"status\":\"Active\",\"given_names\":\"Vishal\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"vpatelsu\"},{\"status\":\"Active\",\"given_names\":\"bill\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"bcurriesu\"},{\"status\":\"Active\",\"given_names\":\"Rebecca\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"rwotzkosu\"},{\"status\":\"Active\",\"given_names\":\"Joel111\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"jdubbersu\"},{\"status\":\"Active\",\"given_names\":\"Sharlene\",\"surname\":\"Wong\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"swongsu\"},{\"status\":\"Active\",\"given_names\":\"KerryMaynard\",\"surname\":\"BRS\",\"position_title\":null,\"email\":\"kerry.maynard@thomsonreuters.com\",\"contact_phone\":null,\"username\":\"kmaynardsu\"},{\"status\":\"Active\",\"given_names\":\"Lewis\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"betlsu\"},{\"status\":\"Active\",\"given_names\":\"Samantha\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"ssullivansu\"},{\"status\":\"Active\",\"given_names\":\"Bijay\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"bjranjitsu\"},{\"status\":\"Active\",\"given_names\":\"Nathan\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"nfeiglinsu\"},{\"status\":\"Active\",\"given_names\":\"Rachel\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"rrawardsu\"},{\"status\":\"Active\",\"given_names\":\"KerryMcCurdy\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"kmccurdysu\"},{\"status\":\"Active\",\"given_names\":\"Shayne\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"sbartlettsu\"},{\"status\":\"Active\",\"given_names\":\"Nary\",\"surname\":\"BRS\",\"position_title\":null,\"email\":null,\"contact_phone\":null,\"username\":\"callejansu\"}]},\"code\":10}}","type":"direct"},"executionResult.error":{"payload":"null","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-28 23:49:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6f7d9af3db65dcd4f819cae43a9619ae</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>BRS_GetUserList</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_6f7d9af3db65dcd4f819cae43a9619ae</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-01 23:29:27</sys_updated_on>
+        <version_container_id>8e03b7c3dbc118d0f819cae43a961926</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f7d9af3db65dcd4f819cae43a9619ae"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-28 23:49:06</sys_created_on>
+        <sys_id>6f7d9af3db65dcd4f819cae43a9619af</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-01 23:29:27</sys_updated_on>
+        <valid_from>2020-06-28 23:51:30</valid_from>
+        <valid_to/>
+        <version>13</version>
+        <version_container_id>8e03b7c3dbc118d0f819cae43a961926</version_container_id>
+        <wf_element_definition display_value="BRS_GetUserList">6f7d9af3db65dcd4f819cae43a9619ae</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="BRS_GetUserList">6f7d9af3db65dcd4f819cae43a9619ae</activity_definition>
+        <condition/>
+        <derived_definition>0ed35853dbc518d0f819cae43a961950</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Error</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-28 23:49:06</sys_created_on>
+        <sys_id>237d9af3db65dcd4f819cae43a9619b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-28 23:49:06</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="BRS_GetUserList">6f7d9af3db65dcd4f819cae43a9619ae</activity_definition>
+        <condition>activityOutput.status_code == "200"</condition>
+        <derived_definition>417e5c63db0998d0f819cae43a9619e3</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-28 23:49:06</sys_created_on>
+        <sys_id>e77d9af3db65dcd4f819cae43a9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-28 23:49:06</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=8e03b7c3dbc118d0f819cae43a961926^sys_id!=6f7d9af3db65dcd4f819cae43a9619af^version&lt;13">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=8e03b7c3dbc118d0f819cae43a961926">
+        <new_activity_definition>6f7d9af3db65dcd4f819cae43a9619ae</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

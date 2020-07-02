@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>Token</name>
+        <rest_message_function display_value="GetUser">b1217b76db8194d0f819cae43a9619dd</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-06-02 01:27:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1ce073cfdb8118d0f819cae43a961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_1ce073cfdb8118d0f819cae43a961989</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-06-02 01:27:13</sys_updated_on>
+        <type>string</type>
+        <value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTEwNjEyMjMsImV4cCI6MTU5MTA2NDgyMywicm9sZXMiOltdLCJ1c2VybmFtZSI6IjEyM2U0NTY3LWU4OWItMTJkMy1hNDU2LTQyNjY1NTQ0MDAwMCJ9.Q5SUJPoNnmjIXrgnyY-n_qv3JEGUCkF6GBCbjX5mhplU2qKp-2PEHgtwpYur2bL-rlVXSeKdJK9KFpX83RHu0JqT3AJki3RGDMaHQCX8z6yJiH0XDQh6ZMRd5WRO1t7XBM4roenRo4wUn5pzn583amU1N11i_xuIoEbtWoan5_5RfHk_R7PnC1IFCVGoi6axmD6srsXPLotkTtGJR2UdGZfYjlG3lIJMKHwN1HmUiQ8Y8-XqPnhiF9rXdt-AndsxB9zJyF6vSNgyFKguaf5PquFQQ6-gWFbgZ_zkGsi1Za9hVU11hDjJ6vl4Fnv-J3RnMdTxDePX3q4U2O8lw5RpaIlwSAW3n-prbuaSau1qnHuonhAgYT2kPBj_tG8LCj_VJbU2Rtwx_DxfIZU4TtyJbUJ5Q4izEJfrqrKysZzzOLey08UHScO0DihP6mGD1ZsoCN5-tH9pB8BKgAeH4zo6wAm-nWIyUpPR2icAW1_Rxp8Q0UAoHfe-lbc9kRHAleYkoFaXNKuVj0lSuGgP4p9sJd46-Ja1x4WTEffxto9PL9H_JN5R99d9_GtR4P9O_BGqa27-U3t8qD0OUpFSy-KSzt7_jpW_0pzhH-JIowRrhLZFWlMsqOcOpFrrr3OejWwfZ-x6MCY0ChQ0MxgaasevMnDoukCYrUJzCRaGNswaUH0</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
