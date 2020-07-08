@@ -88,58 +88,39 @@
         <style/>
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-01 01:43:32</sys_created_on>
+        <sys_created_on>2020-07-07 00:05:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>dbda4de4db7dd018f819cae43a9619a1</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_id>eb0ee39edbf1d410c91c89e405961909</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>(TCC) Current Employees for BRS</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
-        <sys_update_name>wf_element_activity_dbda4de4db7dd018f819cae43a9619a1</sys_update_name>
+        <sys_update_name>wf_element_activity_eb0ee39edbf1d410c91c89e405961909</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-07 00:06:29</sys_updated_on>
+        <sys_updated_on>2020-07-08 01:34:53</sys_updated_on>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
     </wf_element_activity>
-    <sys_translated_text action="delete_multiple" query="documentkey=dbda4de4db7dd018f819cae43a9619a1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=eb0ee39edbf1d410c91c89e405961909"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-01 01:43:32</sys_created_on>
-        <sys_id>9bda4de4db7dd018f819cae43a9619a2</sys_id>
+        <sys_created_on>2020-07-07 00:05:54</sys_created_on>
+        <sys_id>ab0ee39edbf1d410c91c89e40596190a</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-07 00:06:29</sys_updated_on>
-        <valid_from>2020-07-06 23:38:20</valid_from>
+        <sys_updated_on>2020-07-08 01:34:53</sys_updated_on>
+        <valid_from>2020-07-07 00:06:29</valid_from>
         <valid_to/>
-        <version>17</version>
+        <version>18</version>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
-        <wf_element_definition display_value="(TCC) Current Employees for BRS">dbda4de4db7dd018f819cae43a9619a1</wf_element_definition>
+        <wf_element_definition display_value="(TCC) Current Employees for BRS">eb0ee39edbf1d410c91c89e405961909</wf_element_definition>
     </wf_versionable>
     <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="(TCC) Current Employees for BRS">dbda4de4db7dd018f819cae43a9619a1</activity_definition>
-        <condition>activityOutput.HasError != ""</condition>
-        <derived_definition>0093460edbd9dc14f819cae43a96199f</derived_definition>
-        <else_flag>true</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <name>Error</name>
-        <order>999</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-01 01:43:33</sys_created_on>
-        <sys_id>5fda05a8db7dd018f819cae43a96191f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-01 01:43:33</sys_updated_on>
-    </wf_condition_default>
-    <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="(TCC) Current Employees for BRS">dbda4de4db7dd018f819cae43a9619a1</activity_definition>
+        <activity_definition display_value="(TCC) Current Employees for BRS">eb0ee39edbf1d410c91c89e405961909</activity_definition>
         <condition>activityOutput.JSONArrayOutput != ""</condition>
         <derived_definition>e2830282db1ddc14f819cae43a961975</derived_definition>
         <else_flag>false</else_flag>
@@ -151,17 +132,36 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-01 01:43:33</sys_created_on>
-        <sys_id>93da05a8db7dd018f819cae43a961920</sys_id>
+        <sys_created_on>2020-07-07 00:05:54</sys_created_on>
+        <sys_id>270ee39edbf1d410c91c89e40596190d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-01 01:43:33</sys_updated_on>
+        <sys_updated_on>2020-07-07 00:05:54</sys_updated_on>
     </wf_condition_default>
-    <wf_versionable action="update_multiple" query="version_container_id=daf1468edbd9dc14f819cae43a96192b^sys_id!=9bda4de4db7dd018f819cae43a9619a2^version&lt;17">
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="(TCC) Current Employees for BRS">eb0ee39edbf1d410c91c89e405961909</activity_definition>
+        <condition>activityOutput.HasError != ""</condition>
+        <derived_definition>0093460edbd9dc14f819cae43a96199f</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Error</name>
+        <order>999</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-07 00:05:54</sys_created_on>
+        <sys_id>eb0ee39edbf1d410c91c89e40596190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-07 00:05:54</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=daf1468edbd9dc14f819cae43a96192b^sys_id!=ab0ee39edbf1d410c91c89e40596190a^version&lt;18">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=daf1468edbd9dc14f819cae43a96192b">
-        <new_activity_definition>dbda4de4db7dd018f819cae43a9619a1</new_activity_definition>
+        <new_activity_definition>eb0ee39edbf1d410c91c89e405961909</new_activity_definition>
         <out_of_date>true</out_of_date>
         <notes>There is a newer version of this activity.
 

@@ -105,7 +105,7 @@ catch(error){
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
-        <published>true</published>
+        <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-07-01 01:25:36</sys_created_on>
         <sys_id>64c6c5e0db7dd018f819cae43a961999</sys_id>
