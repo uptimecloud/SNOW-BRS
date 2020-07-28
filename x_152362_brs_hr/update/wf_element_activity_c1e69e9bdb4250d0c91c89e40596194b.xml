@@ -14,7 +14,7 @@
         <input_transform/>
         <local_variables/>
         <name>(TCC) Current Employees for BRS</name>
-        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"JSONArrayOutput","type":"STRING"}]}</output_meta>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"SNUsers","type":"DATA_OBJECT","properties":[{"name":"SNUser","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"contact_phone","type":"STRING"},{"name":"title","type":"STRING"},{"name":"email","type":"STRING"},{"name":"given_names","type":"STRING"},{"name":"position_title","type":"STRING"},{"name":"status","type":"STRING"},{"name":"surname","type":"STRING"},{"name":"username","type":"STRING"},{"name":"level","type":"STRING"}]}]}]}]}</output_meta>
         <output_process_script/>
         <output_transform/>
         <processing_script><![CDATA[try {
@@ -37,11 +37,11 @@
 
         //contact details chech for phone number and default to councils number
         if (grEmployees.u_servicenow_user_network_id_keyed.mobile_phone != "" && grEmployees.u_servicenow_user_network_id_keyed.mobile_phone != null && isNaN(grEmployees.u_servicenow_user_network_id_keyed.mobile_phone)) {
-            //mobile number on the sys_user is the employee mobile, what they want to make public not their personal mobile
-            jsonEmployee.contact_phone = grEmployees.u_servicenow_user_network_id_keyed.mobile_phone.toString();
+            //mobile number on the sys_user is the employee mobile, what they want to make public not their personal mobilestr = str.replace(/\s/g,'').replace(/\D/g,'').substring(0,10);
+            jsonEmployee.contact_phone = grEmployees.u_servicenow_user_network_id_keyed.mobile_phone.toString().replace(/\s/g,'').replace(/\D/g,'').substring(0,10);
         } else {
             if (grEmployees.u_hr_profile.office_number != "" && grEmployees.u_hr_profile.office_number != null && isNaN(grEmployees.u_servicenow_user_network_id_keyed.mobile_phone)) {
-                jsonEmployee.contact_phone = grEmployees.u_hr_profile.office_number.toString();
+                jsonEmployee.contact_phone = grEmployees.u_hr_profile.office_number.toString().replace(/\s/g,'').replace(/\D/g,'').substring(0,10);
             } else {
                 jsonEmployee.contact_phone = "07 4727 9000";
             }
@@ -66,18 +66,19 @@
 
 
         //Return the object to the array
-        jsonEmployeesArray.push(jsonEmployee);
-
+        //jsonEmployeesArray.push(jsonEmployee);
+activityOutput.SNUsers.SNUser.push(jsonEmployee);
 
     }
     //Encode as JSON and set it to the output as a string
-    jsonEmployeesArray = new global.JSON().encode(jsonEmployeesArray);
-    activityOutput.JSONArrayOutput = jsonEmployeesArray.toString();
+    //jsonEmployeesArray = new global.JSON().encode(jsonEmployeesArray);
+   // activityOutput.JSONArrayOutput = jsonEmployeesArray.toString();
     //workflow.scratchpad.SNOWempJSON=jsonEmployeesArray;
     //activityOutput.JSONArrayOutput = jsonEmployeesArray.toString();
 	
 	if(workflow.scratchpad.debugging=='true'){
-    gs.info("SNOW USERS jsonEmployeesArray.toString() "+JSONArrayOutput.toString());
+		gs.info("SNOW USERS global.JSON.stringify(activityOutput.JSONArrayOutput): "+global.JSON.stringify(activityOutput.SNUsers.SNUser)); 
+		//gs.info("SNOW USERS jsonEmployeesArray.toString() "+JSONArrayOutput.toString());
 	}
 
 } catch (error) {
@@ -88,39 +89,39 @@
         <style/>
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 00:04:28</sys_created_on>
+        <sys_created_on>2020-07-22 06:34:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>1457fcfadb3d5810c91c89e40596190b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>c1e69e9bdb4250d0c91c89e40596194b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>(TCC) Current Employees for BRS</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
-        <sys_update_name>wf_element_activity_1457fcfadb3d5810c91c89e40596190b</sys_update_name>
+        <sys_update_name>wf_element_activity_c1e69e9bdb4250d0c91c89e40596194b</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-14 23:24:19</sys_updated_on>
+        <sys_updated_on>2020-07-24 01:36:28</sys_updated_on>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
     </wf_element_activity>
-    <sys_translated_text action="delete_multiple" query="documentkey=1457fcfadb3d5810c91c89e40596190b"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c1e69e9bdb4250d0c91c89e40596194b"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 00:04:28</sys_created_on>
-        <sys_id>1057fcfadb3d5810c91c89e40596190d</sys_id>
+        <sys_created_on>2020-07-22 06:34:41</sys_created_on>
+        <sys_id>8de656d7dbc250d0c91c89e40596193c</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-14 23:24:19</sys_updated_on>
-        <valid_from>2020-07-08 01:34:53</valid_from>
+        <sys_updated_on>2020-07-24 01:36:28</sys_updated_on>
+        <valid_from>2020-07-23 02:18:01</valid_from>
         <valid_to/>
-        <version>19</version>
+        <version>22</version>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
-        <wf_element_definition display_value="(TCC) Current Employees for BRS">1457fcfadb3d5810c91c89e40596190b</wf_element_definition>
+        <wf_element_definition display_value="(TCC) Current Employees for BRS">c1e69e9bdb4250d0c91c89e40596194b</wf_element_definition>
     </wf_versionable>
     <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="(TCC) Current Employees for BRS">1457fcfadb3d5810c91c89e40596190b</activity_definition>
+        <activity_definition display_value="(TCC) Current Employees for BRS">c1e69e9bdb4250d0c91c89e40596194b</activity_definition>
         <condition>activityOutput.HasError != ""</condition>
         <derived_definition>0093460edbd9dc14f819cae43a96199f</derived_definition>
         <else_flag>true</else_flag>
@@ -132,15 +133,15 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 00:04:28</sys_created_on>
-        <sys_id>5057fcfadb3d5810c91c89e405961911</sys_id>
+        <sys_created_on>2020-07-22 06:34:41</sys_created_on>
+        <sys_id>4de656d7dbc250d0c91c89e40596193f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-08 00:04:28</sys_updated_on>
+        <sys_updated_on>2020-07-22 06:34:41</sys_updated_on>
     </wf_condition_default>
     <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="(TCC) Current Employees for BRS">1457fcfadb3d5810c91c89e40596190b</activity_definition>
-        <condition>activityOutput.JSONArrayOutput != ""</condition>
+        <activity_definition display_value="(TCC) Current Employees for BRS">c1e69e9bdb4250d0c91c89e40596194b</activity_definition>
+        <condition/>
         <derived_definition>e2830282db1ddc14f819cae43a961975</derived_definition>
         <else_flag>false</else_flag>
         <error>false</error>
@@ -151,17 +152,17 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 00:04:28</sys_created_on>
-        <sys_id>9457fcfadb3d5810c91c89e405961910</sys_id>
+        <sys_created_on>2020-07-22 06:34:41</sys_created_on>
+        <sys_id>85e656d7dbc250d0c91c89e405961940</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-08 00:04:28</sys_updated_on>
+        <sys_updated_on>2020-07-22 06:34:41</sys_updated_on>
     </wf_condition_default>
-    <wf_versionable action="update_multiple" query="version_container_id=daf1468edbd9dc14f819cae43a96192b^sys_id!=1057fcfadb3d5810c91c89e40596190d^version&lt;19">
+    <wf_versionable action="update_multiple" query="version_container_id=daf1468edbd9dc14f819cae43a96192b^sys_id!=8de656d7dbc250d0c91c89e40596193c^version&lt;22">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=daf1468edbd9dc14f819cae43a96192b">
-        <new_activity_definition>1457fcfadb3d5810c91c89e40596190b</new_activity_definition>
+        <new_activity_definition>c1e69e9bdb4250d0c91c89e40596194b</new_activity_definition>
         <out_of_date>true</out_of_date>
         <notes>There is a newer version of this activity.
 

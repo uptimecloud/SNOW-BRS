@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"BRSUsers","type":"DATA_OBJECT","properties":[{"name":"BRSUser","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]},{"name":"BRSRemaining","type":"DATA_OBJECT","properties":[{"name":"data","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Splice Add Users array</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"BRSRemaining","type":"DATA_OBJECT","properties":[{"name":"data","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]},{"name":"BRSAPI","type":"DATA_OBJECT","properties":[{"name":"data","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[//var myArray = ["Object0","Object1","Object2","Object3","Object4"];
+try {
+
+
+    if (activityInput.BRSRemaining.data.length > 0) {
+        var myArray = activityInput.BRSRemaining;
+        var Splice = {}
+        Splice.data = myArray.data.splice(0, 50);
+        var Remaining = myArray;
+        activityOutput.BRSRemaining.data = Remaining.data;
+        activityOutput.BRSAPI.data = Splice.data;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")==true){
+        gs.info("SPLICE Continue Length = " + activityInput.BRSRemaining.data.length);
+        gs.info("SPLICE Continue OUT Length = " + activityOutput.BRSRemaining.data.length);
+		gs.info("SPLICE Continue REMAINING = " + global.JSON.stringify(activityOutput.BRSRemaining.data));
+		gs.info("SPLICE Continue OUT PAYLOAD = " + global.JSON.stringify(activityOutput.BRSAPI.data));
+		 }
+		
+    } else {
+        //var myArray =  activityInput.BRSUsers;
+		 var myArray = activityInput.BRSUsers;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")==true){
+        gs.info("SPLICE First myArray Length = " + activityInput.BRSUsers.BRSUser.length);
+        gs.info("SPLICE First Input Array "+global.JSON.stringify(myArray));
+		 }
+
+        activityOutput.BRSAPI.data = (myArray.BRSUser.splice(0, 200));
+        //Remaining = myArray;
+        activityOutput.BRSRemaining.data = (myArray.BRSUser);
+		if(gs.getProperty("x_152362_brs_hr.Debug")==true){
+        gs.info("SPLICE First Remaining Array "+global.JSON.stringify(myArray));
+        gs.info("SPLICE Remaining Length = " + activityOutput.BRSRemaining.data.length);
+        gs.info("SPLICE API Output" + global.JSON.stringify(activityOutput.BRSAPI));
+		}
+    }
+
+   
+
+} catch (error) {
+    gs.error("SPLICE Array Error Update Users: " + error.lineNumber + error.message);
+}]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-24 05:02:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a8f498c0db1610d0f819cae43a961946</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Splice Add Users array</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_a8f498c0db1610d0f819cae43a961946</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-27 00:17:51</sys_updated_on>
+        <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=a8f498c0db1610d0f819cae43a961946"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-24 05:02:24</sys_created_on>
+        <sys_id>68f498c0db1610d0f819cae43a961947</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-27 00:17:51</sys_updated_on>
+        <valid_from>2020-07-24 06:11:37</valid_from>
+        <valid_to/>
+        <version>32</version>
+        <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
+        <wf_element_definition display_value="Splice Add Users array">a8f498c0db1610d0f819cae43a961946</wf_element_definition>
+    </wf_versionable>
+    <wf_versionable action="update_multiple" query="version_container_id=30572943db311c10c91c89e405961927^sys_id!=68f498c0db1610d0f819cae43a961947^version&lt;32">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=30572943db311c10c91c89e405961927">
+        <new_activity_definition>a8f498c0db1610d0f819cae43a961946</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

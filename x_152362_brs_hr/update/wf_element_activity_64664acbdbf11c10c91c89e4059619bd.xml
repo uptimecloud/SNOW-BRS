@@ -14,7 +14,7 @@
         <input_transform/>
         <local_variables/>
         <name>Splice Add Users array</name>
-        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"BRSSpliced","type":"STRING"}]}</output_meta>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"BRSSpliced","type":"STRING"},{"name":"BRSRemaining","type":"STRING"}]}</output_meta>
         <output_process_script/>
         <output_transform/>
         <processing_script><![CDATA[//var myArray = ["Object0","Object1","Object2","Object3","Object4"];
@@ -22,54 +22,55 @@
 var myArray =  new global.JSON().encode(activityInput.BRSNewUsers);
 gs.info("myArray before slice loop = " +  myArray);
 var tempscratchpadvar = [];
-for(i = 0; (i < myArray.length && i < 2); i++ ){
+for(i = 0; (i < myArray.length && i < 100); i++ ){
 //i < myArray.length means it's at the end of the array and the ||  i < 2 means it's limited to 2 records. 200 in your case.
 tempscratchpadvar.push(myArray.splice(0,1));
 }
 gs.info("tempscratchpadvar temp array to process in the rest method = " +  tempscratchpadvar);
 activityOutput.BRSSpliced=tempscratchpadvar;
+activityOutput.BRSRemaining=myArray;
 gs.info("myArray after splice loop = " +  myArray);]]></processing_script>
         <sample_payloads>{}</sample_payloads>
         <short_description/>
         <style/>
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 22:23:39</sys_created_on>
+        <sys_created_on>2020-07-09 00:28:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>61d9a907db311c10c91c89e40596195e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_id>64664acbdbf11c10c91c89e4059619bd</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Splice Add Users array</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
-        <sys_update_name>wf_element_activity_61d9a907db311c10c91c89e40596195e</sys_update_name>
+        <sys_update_name>wf_element_activity_64664acbdbf11c10c91c89e4059619bd</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:05:47</sys_updated_on>
+        <sys_updated_on>2020-07-09 04:54:07</sys_updated_on>
         <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
     </wf_element_activity>
-    <sys_translated_text action="delete_multiple" query="documentkey=61d9a907db311c10c91c89e40596195e"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=64664acbdbf11c10c91c89e4059619bd"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-08 22:23:40</sys_created_on>
-        <sys_id>21d9a907db311c10c91c89e40596195f</sys_id>
+        <sys_created_on>2020-07-09 00:28:23</sys_created_on>
+        <sys_id>24664acbdbf11c10c91c89e4059619be</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:05:47</sys_updated_on>
-        <valid_from>2020-07-08 23:53:10</valid_from>
+        <sys_updated_on>2020-07-09 04:54:07</sys_updated_on>
+        <valid_from>2020-07-09 01:05:47</valid_from>
         <valid_to/>
-        <version>2</version>
+        <version>3</version>
         <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
-        <wf_element_definition display_value="Splice Add Users array">61d9a907db311c10c91c89e40596195e</wf_element_definition>
+        <wf_element_definition display_value="Splice Add Users array">64664acbdbf11c10c91c89e4059619bd</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=30572943db311c10c91c89e405961927^sys_id!=21d9a907db311c10c91c89e40596195f^version&lt;2">
+    <wf_versionable action="update_multiple" query="version_container_id=30572943db311c10c91c89e405961927^sys_id!=24664acbdbf11c10c91c89e4059619be^version&lt;3">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=30572943db311c10c91c89e405961927">
-        <new_activity_definition>61d9a907db311c10c91c89e40596195e</new_activity_definition>
+        <new_activity_definition>64664acbdbf11c10c91c89e4059619bd</new_activity_definition>
         <out_of_date>true</out_of_date>
         <notes>There is a newer version of this activity.
 

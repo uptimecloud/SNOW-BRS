@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"UsersBRS","type":"STRING","mandatory":false},{"name":"UsersSN","type":"DATA_OBJECT","properties":[{"name":"UserSN","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"contact_phone","type":"STRING","mandatory":false},{"name":"title","type":"STRING","mandatory":false},{"name":"email","type":"STRING","mandatory":false},{"name":"given_names","type":"STRING","mandatory":false},{"name":"position_title","type":"STRING","mandatory":false},{"name":"status","type":"STRING","mandatory":false},{"name":"surname","type":"STRING","mandatory":false},{"name":"username","type":"STRING","mandatory":false},{"name":"level","type":"STRING","mandatory":false}]}]}]}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>BRS_CompareUsers</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"UpdateCurrentUsersCount","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]},{"name":"HasNewUsersCount","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]},{"name":"HasDeactiveUsersCount","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]},{"name":"HasError","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]},{"name":"HasNewUsers","type":"DATA_OBJECT","properties":[{"name":"HasNewUser","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]},{"name":"UpdateCurrentUsers","type":"DATA_OBJECT","properties":[{"name":"UpdateCurrentUser","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]},{"name":"HasDeactiveUsers","type":"DATA_OBJECT","properties":[{"name":"HasDeactiveUser","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[]}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[try {
+    var parser = new global.JSON();
+
+    // var snowemp = parser.decode(activityInput.SNEmpsJSON);
+    var brsemp = parser.decode(activityInput.UsersBRS);
+    var snowemp = activityInput.UsersSN.UserSN;
+
+    //var brsemp = activityInput.BRSUsers; 
+
+    if (gs.getProperty('x_152362_brs_hr.Debug') == 'true') {
+        gs.info('COMPARE USERS JSONBRSUsers ' + brsemp);
+        gs.info('COMPARE USERS JSONSNUsers ' + snowemp);
+    }
+    //activityOutput.BRSNewUserCount = 1;
+
+
+    var arrayUtil = new global.ArrayUtil();
+    //var matchusers=[];
+    var snowid = [];
+    var brsid = [];
+
+//get array of usernames from Service Now to lower case
+    for (var record1 = 0; record1 < snowemp.length; record1++) {
+
+        var isUser = snowemp[record1].username.toLowerCase();
+        snowid.push(isUser);
+
+    }
+//Debug display Service Now users list
+    if (gs.getProperty('x_152362_brs_hr.Debug') == 'true') {
+        gs.info("COMPARE SNOWID " + snowid);
+    }
+	//get array of usernames from Big Red Sky to lower case
+    for (var record = 0; record < brsemp.length; record++) {
+        brsid.push(brsemp[record].username.toLowerCase());
+
+
+    }
+	//Debug display Big Red Sky users list
+    if (gs.getProperty('x_152362_brs_hr.Debug') == 'true') {
+        gs.info("COMPARE BRSID " + brsid);
+    }
+	//return array of usernames where user exists in ServiceNow and Big Red Sky to be used as update
+    var intersectid = arrayUtil.intersect(snowid, brsid);
+	//return array of usernames where user exists in ServiceNow but not in Big Red Sky to be inserted into Big Red Sky
+    var diffidNew = arrayUtil.diff(snowid, brsid);
+	//return array of usernames where user exists in Big Red Sky but not in Service Now to be updated to inactive in Big Red Sky
+    var diffidOld = arrayUtil.diff(brsid, snowid);
+
+    var newusers = [];
+    for (var record2 = 0; record2 < diffidNew.length; record2++) {
+//create array of objects containing detail from Service Now to be inserted into Big Red Sky matching on username.
+        var insert = newusers.push(snowemp[arrayUtil.indexOf(snowid, diffidNew[record2])]);
+        //gs.log("indexOf b: " + arrayUtil.indexOf(snowid, intersectid));
+    }
+
+    //gs.info("NEW USERLIST= "+global.JSON.stringify(newusers));
+
+    var delusers = [];
+    for (var record3 = 0; record3 < diffidOld.length; record3++) {
+
+//create array of objects containing detail from Big Red Sky to be updated to inactive in Big Red Sky matching on username.
+        delusers.push(brsemp[arrayUtil.indexOf(brsid, diffidOld[record3])]);
+
+    }
+
+    //gs.info("DEL USERLIST= "+global.JSON.stringify(delusers));
+
+    var updateusers = [];
+	//create array of objects containing detail from Service Now to be updated in Big Red Sky matching on username.
+    for (var record4 = 0; record4 < intersectid.length; record4++) {
+
+
+        updateusers.push(snowemp[arrayUtil.indexOf(snowid, intersectid[record4])]);
+		
+		for (var record5 = 0; record5 < updateusers.length; record5++) {	
+	 var jsonUpdates = {};
+        jsonUpdates.user_type = "Restricted";
+        jsonUpdates.title = updateUsers[record5].title;
+        jsonUpdates.status = "Active";
+        jsonUpdates.suspended = "f";
+        jsonUpdates.given_names = updateUsers[record5].given_names;
+        jsonUpdates.surname = updateUsers[record5].surname.replace("'","''");
+        jsonUpdates.position_title = updateUsers[record5].position_title;
+        jsonUpdates.email = updateUsers[record5].email.replace("'","''");
+        jsonUpdates.contact_phone = updateUsers[record5].contact_phone;
+        jsonUpdates.username = updateUsers[record5].username;
+        jsonUpdates.timezone = "Australia/Brisbane";
+		jsonUpdates.BRSID= brsemp[record5].username;
+		
+		updateusers.push(jsonUpdates);
+		
+
+    }}
+    if (gs.getProperty('x_152362_brs_hr.Debug') == 'true') {
+        gs.info("COMPARE UPDATE USERLIST= " + global.JSON.stringify(updateusers));
+        gs.info("COMPARE INSERT USERLIST= " + global.JSON.stringify(newusers));
+        gs.info("COMPARE INACTIVE USERLIST= " + global.JSON.stringify(delusers));
+    }
+ 
+    activityOutput.UpdateCurrentUsers.UpdateCurrentUser = updateusers;
+    activityOutput.UpdateCurrentUsersCount = intersectid.length;
+    activityOutput.HasNewUsers.HasNewUser = newusers;
+    activityOutput.HasNewUsersCount = diffidNew.length;
+   activityOutput.HasDeactiveUsers.HasDeactiveUser = delusers;
+    activityOutput.HasDeactiveUsersCount = diffidOld.length;
+
+    //gs.info("NEW COUNT:;"+diffidNew.length);
+    //gs.info("STR "+str);
+    //gs.info("STR2 "+str2);
+    //gs.info("STR3 "+str3);
+    //gs.info("DEL= "+diffidOld);
+    //gs.info("DIFF= "+diffidNew);
+    //gs.info("INTER= "+ intersectid);
+} catch (error) {
+    activityOutput.HasError = "Error from BRS_CompareUsers: " + error;
+}]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-21 06:59:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8ae2914fdbced490f819cae43a96199b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>BRS_CompareUsers</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_8ae2914fdbced490f819cae43a96199b</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-22 01:52:15</sys_updated_on>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=8ae2914fdbced490f819cae43a96199b"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-21 06:59:11</sys_created_on>
+        <sys_id>46e2914fdbced490f819cae43a96199c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-22 01:52:15</sys_updated_on>
+        <valid_from>2020-07-22 00:58:00</valid_from>
+        <valid_to/>
+        <version>81</version>
+        <version_container_id>10bd8c57db8518d0f819cae43a961989</version_container_id>
+        <wf_element_definition display_value="BRS_CompareUsers">8ae2914fdbced490f819cae43a96199b</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="BRS_CompareUsers">8ae2914fdbced490f819cae43a96199b</activity_definition>
+        <condition>activityOutput.HasError!=null</condition>
+        <derived_definition>5a0449a8db3dd018f819cae43a9619d6</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Error</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-21 06:59:11</sys_created_on>
+        <sys_id>46e2914fdbced490f819cae43a96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-21 06:59:11</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="BRS_CompareUsers">8ae2914fdbced490f819cae43a96199b</activity_definition>
+        <condition/>
+        <derived_definition>1ef30de8db3dd018f819cae43a961990</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-21 06:59:11</sys_created_on>
+        <sys_id>8ae2914fdbced490f819cae43a96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-21 06:59:11</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=10bd8c57db8518d0f819cae43a961989^sys_id!=46e2914fdbced490f819cae43a96199c^version&lt;81">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=10bd8c57db8518d0f819cae43a961989">
+        <new_activity_definition>8ae2914fdbced490f819cae43a96199b</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>
