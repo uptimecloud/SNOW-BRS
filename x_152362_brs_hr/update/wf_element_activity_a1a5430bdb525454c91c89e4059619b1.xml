@@ -63,42 +63,61 @@
         <style/>
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-27 00:23:55</sys_created_on>
+        <sys_created_on>2020-08-03 01:36:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>eaf13a30dbd6d4d0f819cae43a9619a1</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_id>a1a5430bdb525454c91c89e4059619b1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Splice Add Users array</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
-        <sys_update_name>wf_element_activity_eaf13a30dbd6d4d0f819cae43a9619a1</sys_update_name>
+        <sys_update_name>wf_element_activity_a1a5430bdb525454c91c89e4059619b1</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-08-03 00:53:05</sys_updated_on>
+        <sys_updated_on>2020-08-03 01:55:19</sys_updated_on>
         <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
     </wf_element_activity>
-    <sys_translated_text action="delete_multiple" query="documentkey=eaf13a30dbd6d4d0f819cae43a9619a1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1a5430bdb525454c91c89e4059619b1"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
         <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
-        <sys_created_on>2020-07-27 00:23:55</sys_created_on>
-        <sys_id>a6f13a30dbd6d4d0f819cae43a9619a2</sys_id>
+        <sys_created_on>2020-08-03 01:36:12</sys_created_on>
+        <sys_id>6da5430bdb525454c91c89e4059619b1</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-08-03 00:53:05</sys_updated_on>
-        <valid_from>2020-07-27 00:41:34</valid_from>
+        <sys_updated_on>2020-08-03 01:55:19</sys_updated_on>
+        <valid_from>2020-08-03 01:36:42</valid_from>
         <valid_to/>
-        <version>34</version>
+        <version>37</version>
         <version_container_id>30572943db311c10c91c89e405961927</version_container_id>
-        <wf_element_definition display_value="Splice Add Users array">eaf13a30dbd6d4d0f819cae43a9619a1</wf_element_definition>
+        <wf_element_definition display_value="Splice Add Users array">a1a5430bdb525454c91c89e4059619b1</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=30572943db311c10c91c89e405961927^sys_id!=a6f13a30dbd6d4d0f819cae43a9619a2^version&lt;34">
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Splice Add Users array">a1a5430bdb525454c91c89e4059619b1</activity_definition>
+        <condition>${activityInput.BRSUsers.BRSUser.length}==0</condition>
+        <derived_definition>efea3ac7dbde1454c91c89e405961921</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>NoInput</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-08-03 01:36:12</sys_created_on>
+        <sys_id>f1a5430bdb525454c91c89e4059619b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-08-03 01:36:42</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=30572943db311c10c91c89e405961927^sys_id!=6da5430bdb525454c91c89e4059619b1^version&lt;37">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=30572943db311c10c91c89e405961927">
-        <new_activity_definition>eaf13a30dbd6d4d0f819cae43a9619a1</new_activity_definition>
+        <new_activity_definition>a1a5430bdb525454c91c89e4059619b1</new_activity_definition>
         <out_of_date>true</out_of_date>
         <notes>There is a newer version of this activity.
 
