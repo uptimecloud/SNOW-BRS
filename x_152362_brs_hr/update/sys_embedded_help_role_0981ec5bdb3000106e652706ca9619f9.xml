@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
     <sys_embedded_help_role action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <role display_value="x_152362_brs_hr.vacancy_user" name="x_152362_brs_hr.vacancy_user">c981ec5bdb3000106e652706ca9619f6</role>
+        <role display_value="x_152362_brs_hr.integration_user" name="x_152362_brs_hr.integration_user">c981ec5bdb3000106e652706ca9619f6</role>
         <sys_class_name>sys_embedded_help_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-11-03 22:32:14</sys_created_on>

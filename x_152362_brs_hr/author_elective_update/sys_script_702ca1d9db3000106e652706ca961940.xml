@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_hr_core_position</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>NewPosition</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[/*
+
+*/
+
+(function executeRule(current, previous /*null when async*/) {
+	var outgoing_api='';
+instance=gs.getProperty('instance_name');
+	if (instance.indexOf('dev')>-1){
+		outgoing_api = gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_DEV');
+	}else{
+	if (instance.indexOf("uat")>-1){
+		outgoing_api=gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_UAT');
+	}else{
+	outgoing_api=gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_PRD');
+	}}
+	if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){
+		gs.info("BigRedSky-HR Integration: " + instance+', '+outgoing_api);
+		}
+if (gs.getProperty('x_152362_brs_hr.Enabled') == 'true'){
+
+try { 
+ //var getToken = new sn_ws.RESTMessageV2('x_152362_brs_hr.BigRedSky', 'PostforToken');
+	var getToken = new sn_ws.RESTMessageV2();
+	getToken.setEndpoint(outgoing_api+'login');
+	getToken.setHttpMethod('POST');
+	getToken.setRequestHeader('Content-type','application/json');
+var creds='{"username":"'+gs.getProperty('x_152362_brs_hr.APIUserName')+'","password":"'+gs.getProperty('x_152362_brs_hr.APIPassword')+'", "client": "tcc"}';	getToken.setRequestBody(creds);
+//Responnse from Token request	
+ var response = getToken.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+var parser=new global.JSON();
+var obj= parser.decode(responseBody);
+	
+	var token=obj.token;
+
+	
+if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){	
+	gs.info('BigRedSky-HR Integration POST for Token: '+httpStatus +' - '+responseBody);
+	gs.info('Token: '+token+  ' - '+creds);
+	//Send email if response dosent return a status code of 200
+	if (httpStatus != '200'){
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+	}
+}
+	
+//Try POST to retrieve OnBoardingDetails
+
+//var brs_OBD = new sn_ws.RESTMessageV2('x_152362_brs_hr.BigRedSky', 'OnBoardingDetails');
+	var brs_OBD = new sn_ws.RESTMessageV2();
+	brs_OBD.setEndpoint(outgoing_api + 'getOnBoardingFields');
+	brs_OBD.setHttpMethod('POST');
+	brs_OBD.setRequestHeader('Authorization','Bearer '+token);
+	brs_OBD.setRequestHeader('Content-type','application/json');
+
+
+	var obd=brs_OBD.execute();
+	var obdResponseBody=obd.haveError() ? obd.getErrorMessage() : obd.getBody();
+	//var obdResponseBody=obd.getBody();
+	var obdStatus=obd.getStatusCode();
+	var obdParser= new global.JSON();
+	var odbObj=obdParser.decode(obdResponseBody);
+	
+	if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){	
+	gs.info('BigRedSky-HR Integration POST for OnBoardingDetails: '+obdStatus +' - '+obdResponseBody);
+//Send email if response dosent return a status code of 200
+		if (obdStatus != '200'){
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+		}
+		
+}
+
+}
+catch(ex) {
+var message = ('BigRedSky-HR Integration POST for OnBoardingDetails: '+ex.message);
+	gs.error(message);
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+	
+}
+
+}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-28 22:51:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>702ca1d9db3000106e652706ca961940</sys_id>
+        <sys_mod_count>76</sys_mod_count>
+        <sys_name>NewPosition</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_script_702ca1d9db3000106e652706ca961940</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-04-16 01:09:41</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=702ca1d9db3000106e652706ca961940"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_script_702ca1d9db3000106e652706ca961940</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;
+    &lt;sys_script action="INSERT_OR_UPDATE"&gt;
+        &lt;abort_action&gt;false&lt;/abort_action&gt;
+        &lt;access&gt;package_private&lt;/access&gt;
+        &lt;action_delete&gt;false&lt;/action_delete&gt;
+        &lt;action_insert&gt;false&lt;/action_insert&gt;
+        &lt;action_query&gt;false&lt;/action_query&gt;
+        &lt;action_update&gt;false&lt;/action_update&gt;
+        &lt;active&gt;false&lt;/active&gt;
+        &lt;add_message&gt;false&lt;/add_message&gt;
+        &lt;advanced&gt;true&lt;/advanced&gt;
+        &lt;change_fields&gt;false&lt;/change_fields&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;collection&gt;sn_hr_core_position&lt;/collection&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;execute_function&gt;false&lt;/execute_function&gt;
+        &lt;filter_condition/&gt;
+        &lt;is_rest&gt;false&lt;/is_rest&gt;
+        &lt;message/&gt;
+        &lt;name&gt;NewPosition&lt;/name&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;priority&gt;100&lt;/priority&gt;
+        &lt;rest_method/&gt;
+        &lt;rest_method_text/&gt;
+        &lt;rest_service/&gt;
+        &lt;rest_service_text/&gt;
+        &lt;rest_variables/&gt;
+        &lt;role_conditions/&gt;
+        &lt;script&gt;&lt;![CDATA[/*
+
+*/
+
+(function executeRule(current, previous /*null when async*/) {
+	var outgoing_api='';
+instance=gs.getProperty('instance_name');
+	if (instance.indexOf('dev')&gt;-1){
+		outgoing_api = gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_DEV');
+	}else{
+	if (instance.indexOf("uat")&gt;-1){
+		outgoing_api=gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_UAT');
+	}else{
+	outgoing_api=gs.getProperty('x_152362_brs_hr.BRS_APIEndpoint_PRD');
+	}}
+	if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){
+		gs.info("BigRedSky-HR Integration: " + instance+', '+outgoing_api);
+		}
+if (gs.getProperty('x_152362_brs_hr.Enabled') == 'true'){
+
+try { 
+ //var getToken = new sn_ws.RESTMessageV2('x_152362_brs_hr.BigRedSky', 'PostforToken');
+	var getToken = new sn_ws.RESTMessageV2();
+	getToken.setEndpoint(outgoing_api+'login');
+	getToken.setHttpMethod('POST');
+	getToken.setRequestHeader('Content-type','application/json');
+var creds='{"username":"'+gs.getProperty('x_152362_brs_hr.APIUserName')+'","password":"'+gs.getProperty('x_152362_brs_hr.APIPassword')+'", "client": "tcc"}';	getToken.setRequestBody(creds);
+//Responnse from Token request	
+ var response = getToken.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+var parser=new global.JSON();
+var obj= parser.decode(responseBody);
+	
+	var token=obj.token;
+
+	
+if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){	
+	gs.info('BigRedSky-HR Integration POST for Token: '+httpStatus +' - '+responseBody);
+	gs.info('Token: '+token+  ' - '+creds);
+	//Send email if response dosent return a status code of 200
+	if (httpStatus != '200'){
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+	}
+}
+	
+//Try POST to retrieve OnBoardingDetails
+
+//var brs_OBD = new sn_ws.RESTMessageV2('x_152362_brs_hr.BigRedSky', 'OnBoardingDetails');
+	var brs_OBD = new sn_ws.RESTMessageV2();
+	brs_OBD.setEndpoint(outgoing_api + 'getOnBoardingFields');
+	brs_OBD.setHttpMethod('POST');
+	brs_OBD.setRequestHeader('Authorization','Bearer '+token);
+	brs_OBD.setRequestHeader('Content-type','application/json');
+
+
+	var obd=brs_OBD.execute();
+	var obdResponseBody=obd.haveError() ? obd.getErrorMessage() : obd.getBody();
+	//var obdResponseBody=obd.getBody();
+	var obdStatus=obd.getStatusCode();
+	var obdParser= new global.JSON();
+	var odbObj=obdParser.decode(obdResponseBody);
+	
+	if (gs.getProperty('x_152362_brs_hr.Debug')=='true'){	
+	gs.info('BigRedSky-HR Integration POST for OnBoardingDetails: '+obdStatus +' - '+obdResponseBody);
+//Send email if response dosent return a status code of 200
+		if (obdStatus != '200'){
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+		}
+		
+}
+
+}
+catch(ex) {
+var message = ('BigRedSky-HR Integration POST for OnBoardingDetails: '+ex.message);
+	gs.error(message);
+	gs.eventQueue('x_152362_brs_hr.alerterror',current,gs.getProperty('x_152362_brs_hr.Contact'),obdResponseBody+', '+obdStatus);	
+	
+}
+
+}
+
+})(current, previous);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-10-28 22:51:59&lt;/sys_created_on&gt;
+        &lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;702ca1d9db3000106e652706ca961940&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;76&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;NewPosition&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="BRS_HR" source="x_152362_brs_hr"&gt;35018477db6400106e652706ca96192f&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;
+        &lt;sys_scope display_value="BRS_HR"&gt;35018477db6400106e652706ca96192f&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_702ca1d9db3000106e652706ca961940&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;a_lzs@townsville.qld.gov.au&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-04-16 01:09:41&lt;/sys_updated_on&gt;
+        &lt;template/&gt;
+        &lt;when&gt;async&lt;/when&gt;
+    &lt;/sys_script&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=702ca1d9db3000106e652706ca961940"/&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>602946433</payload_hash>
+        <record_name>NewPosition</record_name>
+        <reverted_from/>
+        <source>b3665770dbb51010c91c89e405961994</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-02 06:31:53</sys_created_on>
+        <sys_id>3c76d770dbb51010c91c89e4059619ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1730e3974590000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-02 06:31:53</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>7876d77093b510109b594b283f61f0ae</update_guid>
+        <update_guid_history>7876d77093b510109b594b283f61f0ae:0,91565f3053b51010728b9d2098eeebcf:352252631,0a54d33c087510102ca1d7bfafc8e773:0,bd3457f821751010305186c8585cceb6:352252631,2e4a2d8c7254949049b868c0f572ea83:-1243965237,ba98edc8675494903c7ce815773db456:-115621264,79d0ad801e549490b9b5a23c914026ca:528392444,cbb95184491494904220c4f6dfac44cf:247050373</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-08-17 03:58:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>2c9b626cb7ca4412a40f82cb9a81cf39</sys_id>
+        <sys_metadata>702ca1d9db3000106e652706ca961940</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NewPosition</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent display_value="Position">166a154ddb0437c06096413b3a9619fb</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_script_702ca1d9db3000106e652706ca961940</sys_update_name>
+        <sys_update_version display_value="sys_script_702ca1d9db3000106e652706ca961940">3c76d770dbb51010c91c89e4059619ae</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-08-17 03:58:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

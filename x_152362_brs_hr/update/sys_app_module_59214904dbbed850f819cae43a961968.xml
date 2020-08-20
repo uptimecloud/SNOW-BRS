@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="BigRedSky Integration">e4d681c0dbfed850f819cae43a9619a1</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter table="sys_properties">sys_scope=^EQ<item endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>BigRedSky Integration</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sys_properties</name>
+        <order/>
+        <override_menu_roles>true</override_menu_roles>
+        <query>system_properties_ui.do?sysparm_title=Big%20Red%20Sky%20Integration&amp;sysparm_category=BRS_HR</query>
+        <report/>
+        <roles>x_152362_brs_hr.integration_admin_user,Technical Business Analysts Team,Technical Support Officers Team,x_152362_brs_hr.integration_user,admin</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-08-18 04:50:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>59214904dbbed850f819cae43a961968</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>BigRedSky Integration Properties</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_app_module_59214904dbbed850f819cae43a961968</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-08-18 23:03:04</sys_updated_on>
+        <timeline_page/>
+        <title>BigRedSky Integration Properties</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

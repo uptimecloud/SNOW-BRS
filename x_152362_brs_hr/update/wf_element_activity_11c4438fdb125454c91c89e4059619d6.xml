@@ -90,7 +90,7 @@ activityOutput.data.push(jsonEmployee);
         <sys_created_on>2020-08-03 01:32:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>11c4438fdb125454c91c89e4059619d6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>(TCC) Current Employees for BRS</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
@@ -98,20 +98,20 @@ activityOutput.data.push(jsonEmployee);
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_11c4438fdb125454c91c89e4059619d6</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-08-03 01:45:32</sys_updated_on>
+        <sys_updated_on>2020-08-17 05:26:12</sys_updated_on>
         <version_container_id>daf1468edbd9dc14f819cae43a96192b</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=11c4438fdb125454c91c89e4059619d6"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
-        <published>true</published>
+        <published>false</published>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-08-03 01:32:22</sys_created_on>
         <sys_id>ddc4438fdb125454c91c89e4059619d6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-08-03 01:45:32</sys_updated_on>
+        <sys_updated_on>2020-08-17 05:26:12</sys_updated_on>
         <valid_from>2020-08-03 01:45:32</valid_from>
         <valid_to/>
         <version>32</version>

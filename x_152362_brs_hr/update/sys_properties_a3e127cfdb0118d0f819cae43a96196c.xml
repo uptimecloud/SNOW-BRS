@@ -5,14 +5,14 @@
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
         <name>x_152362_brs_hr.APIPassword_PRD</name>
-        <read_roles/>
+        <read_roles>x_152362_brs_hr.integration_user</read_roles>
         <suffix>APIPassword_PRD</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-06-02 00:21:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a3e127cfdb0118d0f819cae43a96196c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>x_152362_brs_hr.APIPassword_PRD</sys_name>
         <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
@@ -20,10 +20,10 @@
         <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>sys_properties_a3e127cfdb0118d0f819cae43a96196c</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-06-02 04:12:20</sys_updated_on>
+        <sys_updated_on>2020-08-18 04:54:04</sys_updated_on>
         <type>password</type>
         <value>{{dflt-gpaes}}ldq96vczZ7HOV4UWFPqsCg==</value>
-        <write_roles/>
+        <write_roles>Technical Business Analysts Team,x_152362_brs_hr.integration_admin_user,Technical Support Officers Team</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=a3e127cfdb0118d0f819cae43a96196c"/>
 </record_update>

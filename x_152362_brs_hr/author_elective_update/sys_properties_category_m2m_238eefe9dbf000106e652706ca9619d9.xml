@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="BRS_HR">dc613619db3400106e652706ca961911</category>
+        <order>30</order>
+        <property display_value="x_152362_brs_hr.BRS_APIEndpoint_UAT" name="x_152362_brs_hr.BRS_APIEndpoint_UAT">205eabe9dbf000106e652706ca961931</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-30 02:58:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>238eefe9dbf000106e652706ca9619d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_152362_brs_hr.BRS_APIEndpoint_UAT.BRS_HR</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_238eefe9dbf000106e652706ca9619d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-30 03:26:09</sys_updated_on>
+    </sys_properties_category_m2m>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>sys_properties_category_m2m_238eefe9dbf000106e652706ca9619d9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="BRS_HR">dc613619db3400106e652706ca961911</category>
+        <order>30</order>
+        <property display_value="x_152362_brs_hr.BRS_APIEndpoint_UAT" name="x_152362_brs_hr.BRS_APIEndpoint_UAT">205eabe9dbf000106e652706ca961931</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-30 02:58:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>238eefe9dbf000106e652706ca9619d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_152362_brs_hr.BRS_APIEndpoint_UAT.BRS_HR</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_238eefe9dbf000106e652706ca9619d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-30 03:26:09</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>]]></payload>
+        <payload_hash>705948771</payload_hash>
+        <record_name>x_152362_brs_hr.BRS_APIEndpoint_UAT.BRS_HR</record_name>
+        <reverted_from/>
+        <source>b3665770dbb51010c91c89e405961994</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-07-02 06:31:50</sys_created_on>
+        <sys_id>9c769770dbb51010c91c89e405961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1730e396aa60000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-07-02 06:31:50</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>d8769770f8b51010866f32e73e416415</update_guid>
+        <update_guid_history>d8769770f8b51010866f32e73e416415:0,f6469b3069b51010a53ccfecf04fd2ac:-1813990247,a554933c447510108edc5caa223c910c:0,cb149bb8fb751010a78a0ffd98024bbf:-1813990247,72b95184f9149490aadcdea1f4672b48:-1529145623</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-08-17 01:06:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>0c64d6d6f10e4d2e895e93480c7676f1</sys_id>
+        <sys_metadata>238eefe9dbf000106e652706ca9619d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_152362_brs_hr.BRS_APIEndpoint_UAT.BRS_HR</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>sys_properties_category_m2m_238eefe9dbf000106e652706ca9619d9</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_238eefe9dbf000106e652706ca9619d9">9c769770dbb51010c91c89e405961915</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-08-17 01:06:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
