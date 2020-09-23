@@ -74,7 +74,7 @@
         <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
         <ui_id>9311ec0c-0613-4df0-82d1-f8633348a151</ui_id>
         <workflow_inputs/>
-        <workflow_reference display_value="(TCC) BRSSync_LZS">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
+        <workflow_reference display_value="(TCC) BRSSync_Users">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
     </sys_hub_flow_logic>
     <sys_variable_value action="delete_multiple" query="document_key=6af78fc3db8dd4d0f819cae43a9619dc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -183,7 +183,7 @@
         <sys_updated_on>2020-06-03 00:13:21</sys_updated_on>
         <ui_id>9311ec0c-0613-4df0-82d1-f8633348a151</ui_id>
         <workflow_inputs/>
-        <workflow_reference display_value="(TCC) BRSSync_LZS">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
+        <workflow_reference display_value="(TCC) BRSSync_Users">54064f8fdb4dd4d0f819cae43a96194e</workflow_reference>
     </sys_hub_flow_logic>
     <sys_variable_value action="delete_multiple" query="document_key=6af78fc3db8dd4d0f819cae43a9619dc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

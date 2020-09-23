@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="DELETE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"InputList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]},{"name":"RemainingList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Splice Input Pagination</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"OutputList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING"}]},{"name":"OutputRemaining","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING"}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[try {
+
+
+    if (activityInput.BRSRemaining.data.length > 0) {
+        var myArray = activityInput.BRSRemaining;
+        var Splice = {}
+        Splice.data = myArray.data.splice(0, 100);
+        var Remaining = myArray;
+        activityOutput.BRSRemaining.data = Remaining.data;
+        activityOutput.BRSAPI.data = Splice.data;
+		activityOutput.Continue=true;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE Continue Length = " + activityInput.BRSRemaining.data.length);
+        gs.info("SPLICE Continue OUT Length = " + activityOutput.BRSRemaining.data.length);
+		gs.info("SPLICE Continue REMAINING = " + global.JSON.stringify(activityOutput.BRSRemaining.data));
+		gs.info("SPLICE Continue OUT PAYLOAD = " + global.JSON.stringify(activityOutput.BRSAPI.data));
+		 }
+		
+    } else if(activityInput.BRSUsers.BRSUser.length > 0) {
+     	 var myArray = activityInput.BRSUsers;
+		activityOutput.Continue=true;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE First myArray Length = " + activityInput.BRSUsers.BRSUser.length);
+        gs.info("SPLICE First Input Array "+global.JSON.stringify(myArray));
+		 }
+
+        activityOutput.BRSAPI.data = (myArray.BRSUser.splice(0, 100));
+        //Remaining = myArray;
+        activityOutput.BRSRemaining.data = (myArray.BRSUser);
+		if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE First Remaining Array "+global.JSON.stringify(myArray));
+        gs.info("SPLICE Remaining Length = " + activityOutput.BRSRemaining.data.length);
+        gs.info("SPLICE API Output" + global.JSON.stringify(activityOutput.BRSAPI));
+		    }
+	}
+else{
+	gs.info("SPLICE no input array "+ activityInput.BRSUsers.BRSUser.length);
+	activityOutput.Continue=false;
+}
+	
+
+} catch (error) {
+    gs.error("SPLICE Array Error Update Users: " + error.lineNumber + error.message);
+}]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-09-23 22:47:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>35b11673db13d0d0f819cae43a9619ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Splice Input Pagination</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_update_name>wf_element_activity_35b11673db13d0d0f819cae43a9619ae</sys_update_name>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-09-23 22:50:42</sys_updated_on>
+        <version_container_id>66c192b3db13d0d0f819cae43a96199f</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="DELETE" query="documentkey=35b11673db13d0d0f819cae43a9619ae"/>
+    <wf_versionable action="DELETE">
+        <checked_out>2020-09-23 22:47:51</checked_out>
+        <checked_out_by display_value="Leon Storey Admin">bc2a115c4f3a2a40a022c61f0310c796</checked_out_by>
+        <published>false</published>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-09-23 22:47:51</sys_created_on>
+        <sys_id>e2c192b3db13d0d0f819cae43a9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-09-23 22:47:51</sys_updated_on>
+        <valid_from/>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>66c192b3db13d0d0f819cae43a96199f</version_container_id>
+        <wf_element_definition display_value="Splice Input Pagination">35b11673db13d0d0f819cae43a9619ae</wf_element_definition>
+    </wf_versionable>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <file_path/>
+        <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
+        <instance_name>mitownsvilledev</instance_name>
+        <name>wf_element_activity_35b11673db13d0d0f819cae43a9619ae</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="wf_element_activity"&gt;&lt;wf_element_activity action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;attributes/&gt;&lt;base_provider display_value="Run Script"&gt;d0c7fe11eb013100fc5e8a7af106fee0&lt;/base_provider&gt;&lt;category/&gt;&lt;checked_out_by display_value="Leon Storey Admin"&gt;bc2a115c4f3a2a40a022c61f0310c796&lt;/checked_out_by&gt;&lt;default_height/&gt;&lt;default_width/&gt;&lt;description/&gt;&lt;image&gt;images/heisenberg_icons/workflow_ie8/provider_runscript.png&lt;/image&gt;&lt;input_meta&gt;{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"InputList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]},{"name":"RemainingList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING","mandatory":false}]}]}&lt;/input_meta&gt;&lt;input_process_script/&gt;&lt;input_transform/&gt;&lt;local_variables/&gt;&lt;name&gt;Splice Input Pagination&lt;/name&gt;&lt;output_meta&gt;{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"OutputList","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING"}]},{"name":"OutputRemaining","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING"}]}]}&lt;/output_meta&gt;&lt;output_process_script/&gt;&lt;output_transform/&gt;&lt;processing_script&gt;&lt;![CDATA[try {
+
+
+    if (activityInput.BRSRemaining.data.length &gt; 0) {
+        var myArray = activityInput.BRSRemaining;
+        var Splice = {}
+        Splice.data = myArray.data.splice(0, 100);
+        var Remaining = myArray;
+        activityOutput.BRSRemaining.data = Remaining.data;
+        activityOutput.BRSAPI.data = Splice.data;
+		activityOutput.Continue=true;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE Continue Length = " + activityInput.BRSRemaining.data.length);
+        gs.info("SPLICE Continue OUT Length = " + activityOutput.BRSRemaining.data.length);
+		gs.info("SPLICE Continue REMAINING = " + global.JSON.stringify(activityOutput.BRSRemaining.data));
+		gs.info("SPLICE Continue OUT PAYLOAD = " + global.JSON.stringify(activityOutput.BRSAPI.data));
+		 }
+		
+    } else if(activityInput.BRSUsers.BRSUser.length &gt; 0) {
+     	 var myArray = activityInput.BRSUsers;
+		activityOutput.Continue=true;
+		 if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE First myArray Length = " + activityInput.BRSUsers.BRSUser.length);
+        gs.info("SPLICE First Input Array "+global.JSON.stringify(myArray));
+		 }
+
+        activityOutput.BRSAPI.data = (myArray.BRSUser.splice(0, 100));
+        //Remaining = myArray;
+        activityOutput.BRSRemaining.data = (myArray.BRSUser);
+		if(gs.getProperty("x_152362_brs_hr.Debug")=="true"){
+        gs.info("SPLICE First Remaining Array "+global.JSON.stringify(myArray));
+        gs.info("SPLICE Remaining Length = " + activityOutput.BRSRemaining.data.length);
+        gs.info("SPLICE API Output" + global.JSON.stringify(activityOutput.BRSAPI));
+		    }
+	}
+else{
+	gs.info("SPLICE no input array "+ activityInput.BRSUsers.BRSUser.length);
+	activityOutput.Continue=false;
+}
+	
+
+} catch (error) {
+    gs.error("SPLICE Array Error Update Users: " + error.lineNumber + error.message);
+}]]&gt;&lt;/processing_script&gt;&lt;sample_payloads&gt;{}&lt;/sample_payloads&gt;&lt;short_description/&gt;&lt;style/&gt;&lt;sys_class_name&gt;wf_element_activity&lt;/sys_class_name&gt;&lt;sys_created_by&gt;a_lzs@townsville.qld.gov.au&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-23 22:47:51&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;35b11673db13d0d0f819cae43a9619ae&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Splice Input Pagination&lt;/sys_name&gt;&lt;sys_package display_value="BRS_HR" source="x_152362_brs_hr"&gt;35018477db6400106e652706ca96192f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="BRS_HR"&gt;35018477db6400106e652706ca96192f&lt;/sys_scope&gt;&lt;sys_update_name&gt;wf_element_activity_35b11673db13d0d0f819cae43a9619ae&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;a_lzs@townsville.qld.gov.au&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-23 22:50:42&lt;/sys_updated_on&gt;&lt;version_container_id&gt;66c192b3db13d0d0f819cae43a96199f&lt;/version_container_id&gt;&lt;/wf_element_activity&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=35b11673db13d0d0f819cae43a9619ae"/&gt;&lt;wf_versionable action="INSERT_OR_UPDATE"&gt;&lt;checked_out&gt;2020-09-23 22:47:51&lt;/checked_out&gt;&lt;checked_out_by display_value="Leon Storey Admin"&gt;bc2a115c4f3a2a40a022c61f0310c796&lt;/checked_out_by&gt;&lt;published&gt;false&lt;/published&gt;&lt;sys_created_by&gt;a_lzs@townsville.qld.gov.au&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-23 22:47:51&lt;/sys_created_on&gt;&lt;sys_id&gt;e2c192b3db13d0d0f819cae43a9619a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;a_lzs@townsville.qld.gov.au&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-23 22:47:51&lt;/sys_updated_on&gt;&lt;valid_from/&gt;&lt;valid_to/&gt;&lt;version&gt;1&lt;/version&gt;&lt;version_container_id&gt;66c192b3db13d0d0f819cae43a96199f&lt;/version_container_id&gt;&lt;wf_element_definition display_value="Splice Input Pagination"&gt;35b11673db13d0d0f819cae43a9619ae&lt;/wf_element_definition&gt;&lt;/wf_versionable&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1552739510</payload_hash>
+        <record_name>Splice Input Pagination</record_name>
+        <reverted_from/>
+        <source>48865330dbb51010c91c89e40596193a</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-09-23 22:50:42</sys_created_on>
+        <sys_id>5c72da73db13d0d0f819cae43a961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174bd296cad0000001</sys_recorded_at>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-09-23 22:50:42</sys_updated_on>
+        <type>Activity Designer</type>
+        <update_guid>d472da73b713d0d0c529ef1e84722e12</update_guid>
+        <update_guid_history>d472da73b713d0d0c529ef1e84722e12:1552739510</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 24/09/2020 08:56:53">4bd356b7db13d0d0f819cae43a9619d8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
+        <sys_created_on>2020-09-23 22:56:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="wf_element_activity">wf_element_activity</sys_db_object>
+        <sys_id>cb7878b973d349908a988e8eefe75840</sys_id>
+        <sys_metadata>35b11673db13d0d0f819cae43a9619ae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Splice Input Pagination</sys_name>
+        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
+        <sys_update_name>wf_element_activity_35b11673db13d0d0f819cae43a9619ae</sys_update_name>
+        <sys_update_version display_value="wf_element_activity_35b11673db13d0d0f819cae43a9619ae">5c72da73db13d0d0f819cae43a961912</sys_update_version>
+        <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
+        <sys_updated_on>2020-09-23 22:56:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
