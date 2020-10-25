@@ -61,10 +61,10 @@
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Email on BRC API Request Failure</sys_name>
         <sys_overrides/>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>sysevent_email_action_fd78bfbddb7040106e652706ca961932</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-10-30 22:27:44</sys_updated_on>

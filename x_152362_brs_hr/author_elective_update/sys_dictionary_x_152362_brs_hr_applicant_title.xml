@@ -75,7 +75,7 @@
     </sys_dictionary>
 <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <application display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</application>
         <file_path/>
         <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
         <instance_name>mitownsvilledev</instance_name>
@@ -184,11 +184,11 @@
         <sys_metadata>a4a9d144db149490c91c89e4059619d0</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Title</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_parent display_value="">2d30a85bdb3000106e652706ca961996</sys_parent>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
         <sys_update_name>sys_dictionary_x_152362_brs_hr_applicant_title</sys_update_name>
         <sys_update_version display_value="sys_dictionary_x_152362_brs_hr_applicant_title">dfa99944db149490c91c89e4059619ec</sys_update_version>

@@ -143,7 +143,7 @@ and select 'Update activity' to use the latest version, then publish the workflo
     </wf_activity>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="BRS_HR">35018477db6400106e652706ca96192f</application>
+        <application display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</application>
         <file_path/>
         <instance_id>89e25f606fe45e001a75a9cc5d3ee4d7</instance_id>
         <instance_name>mitownsvilledev</instance_name>
@@ -180,11 +180,11 @@ and select 'Update activity' to use the latest version, then publish the workflo
         <sys_metadata>ec63ebebdb1d1c54f819cae43a9619af</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>(TCC) CompareBRS to SNOW Employees</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_scope_delete display_value="">3a3ecffe926f4c349fae0f330f9fa091</sys_scope_delete>
         <sys_update_name>wf_element_activity_ec63ebebdb1d1c54f819cae43a9619af</sys_update_name>
         <sys_update_version display_value="wf_element_activity_ec63ebebdb1d1c54f819cae43a9619af">1d65a7efdb1d1c54f819cae43a96190a</sys_update_version>

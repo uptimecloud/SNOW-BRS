@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
         <operation>execute</operation>
-        <source_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</source_scope>
+        <source_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</source_scope>
         <status>allowed</status>
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -10,10 +10,10 @@
         <sys_id>25911bd1dbb400106e652706ca961979</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Glide API: properties</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>sys_scope_privilege_25911bd1dbb400106e652706ca961979</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-10-29 06:13:39</sys_updated_on>

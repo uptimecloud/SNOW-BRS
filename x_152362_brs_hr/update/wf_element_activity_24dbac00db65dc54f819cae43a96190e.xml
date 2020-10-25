@@ -102,10 +102,10 @@ workflow.info("INTER= "+ intersectid);
         <sys_id>24dbac00db65dc54f819cae43a96190e</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name>BRS_CompareUsers</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_24dbac00db65dc54f819cae43a96190e</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
         <sys_updated_on>2020-06-17 00:16:21</sys_updated_on>

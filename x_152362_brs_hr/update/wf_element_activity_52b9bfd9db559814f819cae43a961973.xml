@@ -28,10 +28,10 @@
         <sys_id>52b9bfd9db559814f819cae43a961973</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>BRS_GetUserList</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_52b9bfd9db559814f819cae43a961973</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
         <sys_updated_on>2020-06-25 03:22:50</sys_updated_on>

@@ -127,10 +127,10 @@ activityOutput.PATCHDisableApprovers="";]]></processing_script>
         <sys_id>2c323af7dbe5dcd4f819cae43a961952</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Convert to BRS POST New User</sys_name>
-        <sys_package display_value="BRS_HR" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
+        <sys_package display_value="BRS_HR_Integration" source="x_152362_brs_hr">35018477db6400106e652706ca96192f</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="BRS_HR">35018477db6400106e652706ca96192f</sys_scope>
+        <sys_scope display_value="BRS_HR_Integration">35018477db6400106e652706ca96192f</sys_scope>
         <sys_update_name>wf_element_activity_2c323af7dbe5dcd4f819cae43a961952</sys_update_name>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
         <sys_updated_on>2020-06-29 03:30:19</sys_updated_on>
