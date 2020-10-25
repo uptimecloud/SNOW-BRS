@@ -31,12 +31,12 @@
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-09-17 22:57:27</sys_created_on>
         <sys_id>f87a9fb5db131490f819cae43a961911</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>a_lzs@townsville.qld.gov.au</sys_updated_by>
-        <sys_updated_on>2020-09-23 22:46:26</sys_updated_on>
+        <sys_updated_on>2020-10-25 22:31:03</sys_updated_on>
         <table>global</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="(TCC) BRSSync_Users">54064f8fdb4dd4d0f819cae43a96194e</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
