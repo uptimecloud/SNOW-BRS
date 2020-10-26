@@ -153,7 +153,7 @@ else{
         <reverted_from/>
         <source>48865330dbb51010c91c89e40596193a</source>
         <source_table>sys_update_set</source_table>
-        <state>current</state>
+        <state>previous</state>
         <sys_created_by>a_lzs@townsville.qld.gov.au</sys_created_by>
         <sys_created_on>2020-09-23 22:50:42</sys_created_on>
         <sys_id>5c72da73db13d0d0f819cae43a961912</sys_id>
